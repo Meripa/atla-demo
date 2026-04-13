@@ -8,13 +8,13 @@ import logo from '../assets/logo.png'
 function App() {
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen  text-white">
       
 
       {/* HERO */}
       <section className="min-h-screen flex items-center relative">
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34b4')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 "></div>
+        <div className="absolute inset-0  bg-cover bg-center"></div>
 
         <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
             <div className="mb-2 flex justify-center">
@@ -62,24 +62,24 @@ function App() {
             />
         </div>
 
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 /50"></div>
 
         <div className="relative z-10 px-6">
             <p className='text-orange-400' style={{ fontFamily: "Vivaldi, cursive" }} >"Meie Kirg on põletada <br></br>loodusandidest imelisi jooke."</p>
         </div>
         </section>
 
-    <section className="py-32 bg-black text-center">
+    <section className="py-32  text-center">
         <h2 className="text-4xl md:text-6xl font-serif text-zinc-200 max-w-4xl mx-auto leading-tight">
-
+           "MEIE KIRG ON PÕLETADA <br />
             <span className="text-amber-400">
-
+            LOODUSANDIDEST IMELISI JOOKE"
             </span>
         </h2>
         </section>
 
       {/* PRODUCTS */}
-      <section className="py-24 bg-black">
+      <section className="py-24 ">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-serif text-center mb-4">MEIE KIRG ON PÕLETADA LOODUSANDIDEST
 IMELISI JOOKE</h2>
@@ -95,8 +95,8 @@ Kompromissitu usk erakordsesse on alati olnud meie veendumus. See on andnud meil
               { name: "Ploomibrändi", desc: "Rikkalik ja sügav maitse.", price: "xx€" },
               { name: "Tammevaadi eriseeria", desc: "Laagerdunud tammes, kompleksne.", price: "xx€" }
             ].map((p, i) => (
-              <div key={i} className="bg-zinc-900 rounded-2xl overflow-hidden hover:scale-105 transition">
-                <div className="h-64 flex items-center justify-center bg-zinc-900">
+              <div key={i} className=" rounded-2xl overflow-hidden hover:scale-105 transition">
+                <div className="h-64 flex items-center justify-center ">
                   <img 
                     src={logo} 
                     alt="Product" 
@@ -123,7 +123,7 @@ Kompromissitu usk erakordsesse on alati olnud meie veendumus. See on andnud meil
       </section>
 
       {/* EXPERIENCE */}
-      <section className="py-20 bg-zinc-900">
+      <section className="py-20 ">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-serif text-center mb-4">Külastage Atla Distilleryt</h2>
           <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto">
@@ -143,8 +143,8 @@ Kompromissitu usk erakordsesse on alati olnud meie veendumus. See on andnud meil
           </p>
 
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-zinc-950 rounded-3xl overflow-hidden">
-              <div className="h-80 bg-zinc-800 flex items-center justify-center text-6xl">Img</div>
+            <div className=" rounded-3xl overflow-hidden">
+              <div className="h-80  flex items-center justify-center text-6xl">Img</div>
               <div className="p-8">
                 <h3 className="text-2xl mb-3">Klassikaline ringkäik</h3>
                 <p className="text-zinc-400 mb-6">1,5h ekskursioon + tutvustus.</p>
@@ -152,8 +152,8 @@ Kompromissitu usk erakordsesse on alati olnud meie veendumus. See on andnud meil
               </div>
             </div>
 
-            <div className="bg-zinc-950 rounded-3xl overflow-hidden">
-              <div className="h-80 bg-zinc-800 flex items-center justify-center text-6xl">Img</div>
+            <div className="bg-zinc-900 rounded-3xl overflow-hidden">
+              <div className="h-80  flex items-center justify-center text-6xl">Img</div>
               <div className="p-8">
                 <h3 className="text-2xl mb-3">Premium degusteerimine</h3>
                 <p className="text-zinc-400 mb-6">5 joogi degusteerimine sommeljeega.</p>
@@ -165,9 +165,9 @@ Kompromissitu usk erakordsesse on alati olnud meie veendumus. See on andnud meil
       </section>
 
       {/* STORY */}
-      <section className="py-24 bg-zinc-950">
+      <section className="py-24">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="h-80 bg-zinc-800 rounded-2xl"></div>
+          <div className="h-80  rounded-2xl"></div>
 
           <div>
             <h2 className="text-4xl font-serif mb-6">Meie lugu</h2>
@@ -181,33 +181,6 @@ Kõik saab alguse esimesest sammust. Oma rännakut unistuste ja maitsete maale a
           </div>
         </div>
       </section>
-    {/*
-      {/* VALUES
-      <section className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-serif mb-12">Miks valida Atla</h2>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            <div>
-              <h3 className="text-xl mb-2 text-amber-400">Kohalik tooraine</h3>
-              <p className="text-zinc-400 text-sm">Eesti viljad ja kvaliteet.</p>
-            </div>
-
-            <div>
-              <h3 className="text-xl mb-2 text-amber-400">Aeglane protsess</h3>
-              <p className="text-zinc-400 text-sm">Kvaliteet võtab aega.</p>
-            </div>
-
-            <div>
-              <h3 className="text-xl mb-2 text-amber-400">Käsitöö</h3>
-              <p className="text-zinc-400 text-sm">Väikesed partiid, suur kvaliteet.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-       */}
-
-
 
     </div>
   )
