@@ -65,7 +65,7 @@ function App() {
         <div className="absolute inset-0 /50"></div>
 
         <div className="relative z-10 px-6">
-            <p className='text-orange-400' style={{ fontFamily: "Vivaldi, cursive" }} >"Meie Kirg on põletada <br></br>loodusandidest imelisi jooke."</p>
+            <p className='text-orange-400' style={{ fontFamily: "Vivaldi, cursive" }} ></p>
         </div>
         </section>
 
