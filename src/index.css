@@ -2,8 +2,22 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Rafale', sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lovelo", sans-serif;
+}
+
 body {
   background-color: #18181b; /* zinc-900 */
+}
+
+@font-face {
+    font-family: "Lovelo";
+    src: url("assets/fonts/Lovelo.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Rafale";
+    src: url("assets/fonts/Rafale.ttf") format("truetype");
 }
