@@ -71,9 +71,9 @@ function App() {
 
     <section className="py-32 bg-black text-center">
         <h2 className="text-4xl md:text-6xl font-serif text-zinc-200 max-w-4xl mx-auto leading-tight">
-            MEIE KIRG ON PÕLETADA <br />
+           "MEIE KIRG ON PÕLETADA <br />
             <span className="text-amber-400">
-            LOODUSANDIDEST IMELISI JOOKE
+            LOODUSANDIDEST IMELISI JOOKE"
             </span>
         </h2>
         </section>
