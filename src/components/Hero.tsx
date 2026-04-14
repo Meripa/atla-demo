@@ -1,9 +1,38 @@
 import {Link} from 'react-router-dom'
 import Meiekirg from '../assets/Meiekirg.jpg'
-
+import {products} from '../data/products'
 
 {/* Pildid */}
 import logo from '../assets/logo.png'
+import tehasetuur from '../assets/tehasetuur.png'
+import sinujuurde from '../assets/sinujuurde.png'
+import grupipilt from '../assets/aboutpage/grupipilt.jpg'
+
+{/* Choose pictures for front products.*/}
+const featuredIds = [1, 3, 5]
+const featuredProducts = products.filter(p =>
+  featuredIds.includes(p.id)
+)
+
+{/* For changing Tours and meeting info */}
+
+const experiences = [
+  {
+    title: "Meie juures",
+    desc: "2h ekskursioon koos tootmise tutvustusega ning dekusteerimisega.",
+    price: "250 €",
+    image: tehasetuur
+  },
+  {
+    title: "Kliendi juures",
+    desc: "Tuleme Teie juurde oma lugu jutustama",
+    price: "150 €",
+    image: sinujuurde
+  }
+]
+
+
+
 
 function App() {
 
@@ -17,7 +46,7 @@ function App() {
         <div className="absolute inset-0  bg-cover bg-center"></div>
 
         <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
-            <div className="mb-2 flex justify-center">
+            <div className="mb-2 flex justify-center bg">
             <img
                 src={logo}
                 alt="Atla"
@@ -69,118 +98,206 @@ function App() {
         </div>
         </section>
 
-    <section className="py-32  text-center">
-        <h2 className="text-4xl md:text-6xl font-serif text-zinc-200 max-w-4xl mx-auto leading-tight">
-           "MEIE KIRG ON PÕLETADA <br />
-            <span className="text-amber-400">
-            LOODUSANDIDEST IMELISI JOOKE"
-            </span>
-        </h2>
+
+        {/* PRODUCTS */}
+        <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+
+            {/* HEADER */}
+            <h2 className="text-4xl font-serif text-center mb-4">
+            Valik hetkedeks, mis väärivad aega
+            </h2>
+
+            <p className="text-center text-zinc-400 mb-16 max-w-2xl mx-auto leading-relaxed">
+            Need joogid ei ole juhuslik valik.  
+            Igaüks neist on kujunenud aeglaselt ja teadlikult.
+            </p>
+
+      {/* GRID */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+
+        {featuredProducts.map((p) => (
+        <div
+            key={p.id}
+            className="group bg-zinc-900/50 rounded-2xl overflow-hidden hover:bg-zinc-900 transition duration-300"
+        >
+
+            {/* IMAGE */}
+            <Link to={`/tooted/${p.id}`}>
+            <div className="relative overflow-hidden">
+
+                <img
+                src={p.image}
+                alt={p.name}
+                className="w-full h-70 object-cover group-hover:scale-105 transition duration-700"
+                />
+
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/25"></div>
+
+                {/* PRICE TOP RIGHT */}
+
+
+            </div>
+            </Link>
+
+        {/* TEXT + RIGHT SIDE */}
+        <div className="px-3 py-3 flex justify-between items-start">
+
+        {/* LEFT */}
+        <div className="max-w-[70%]">
+            <h3 className="text-lg font-serif tracking-wide mb-1">
+            {p.name}
+            </h3>
+
+            <p className="text-zinc-500 text-sm leading-relaxed">
+            {p.desc}
+            </p>
+        </div>
+
+        {/* RIGHT */}
+        <div className="flex flex-col items-end gap-2">
+
+            <p className="text-amber-400 text-lg tracking-wide">
+            {p.price} €
+            </p>
+
+            <button className="px-4 py-1.5 border border-amber-500 text-sm rounded-full hover:bg-amber-500/10 transition">
+            Lisa
+            </button>
+
+        </div>
+
+        </div>
+
+        </div>
+        ))}
+
+            </div>
+
+            {/* CTA */}
+            <div className="mt-16 text-center">
+            <Link to="/tooted"className="px-8 py-3 border border-amber-400 hover:bg-amber-400/10 rounded-full transition">
+                Vaata kõiki tooteid →
+            </Link>
+            </div>
+
+        </div>
         </section>
 
-      {/* PRODUCTS */}
-      <section className="py-24 ">
+        {/* EXPERIENCE */}
+        <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-serif text-center mb-4">MEIE KIRG ON PÕLETADA LOODUSANDIDEST
-IMELISI JOOKE</h2>
-          <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto">
-            
 
-Kompromissitu usk erakordsesse on alati olnud meie veendumus. See on andnud meile tõuke teha asju omal moel algusest peale. See on suhtumine, mis avaldub igas meie joogis.
-          </p>
+            {/* HEADER */}
+            <h2 className="text-4xl font-serif text-center mb-4">
+            Külastage Atla Distilleryt
+            </h2>
 
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              { name: "Õunabrändi", desc: "Värske ja puuviljane, Eesti õuntest.", price: "xx€" },
-              { name: "Ploomibrändi", desc: "Rikkalik ja sügav maitse.", price: "xx€" },
-              { name: "Tammevaadi eriseeria", desc: "Laagerdunud tammes, kompleksne.", price: "xx€" }
-            ].map((p, i) => (
-              <div key={i} className=" rounded-2xl overflow-hidden hover:scale-105 transition">
-                <div className="h-64 flex items-center justify-center ">
-                  <img 
-                    src={logo} 
-                    alt="Product" 
-                    className="h-32 opacity-70 hover:opacity-100 transition duration-300"
-                  />
+            <p className="text-center text-zinc-400 mb-16 max-w-2xl mx-auto leading-relaxed">
+            Võimalus kogeda tootmist lähedalt.  
+            Näha, kuidas aeg ja tooraine loovad maitse.
+            </p>
+
+            {/* GRID */}
+            <div className="grid md:grid-cols-2 gap-12">
+
+            {experiences.map((e, i) => (
+                <div
+                key={i}
+                className="group relative rounded-3xl overflow-hidden"
+                >
+
+                {/* IMAGE */}
+                <div className="h-105 overflow-hidden">
+                    <img
+                    src={e.image}
+                    alt={e.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                    />
                 </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl mb-2">{p.name}</h3>
-                  <p className="text-zinc-400 text-sm mb-4">{p.desc}</p>
-                  <p className="text-amber-400 font-medium">{p.price}</p>
+
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
+
+                {/* TEXT ON IMAGE */}
+                <div className="absolute bottom-0 p-8 w-full">
+
+                    <h3 className="text-2xl font-serif mb-2">
+                    {e.title}
+                    </h3>
+
+                    <p className="text-zinc-300 text-sm mb-4 max-w-sm">
+                    {e.desc}
+                    </p>
+
+                    <div className="flex items-center justify-between">
+
+                    <p className="text-amber-400">
+                        {e.price}
+                    </p>
+
+                    <Link to="/tehasetuur"className="px-5 py-2 border border-amber-400 rounded-full text-sm hover:bg-amber-400/10 transition">
+                        Loe Täpsemalt
+                    </Link>
+
+                    </div>
+
                 </div>
-                
-              </div>
-              
+
+                </div>
             ))}
-            <div className="mt-12 text-center">
-              <button className="px-8 py-3 border border-amber-400 hover:bg-amber-400/10 rounded-full transition center" >
-                Vaata kõiki tooteid →
-              </button>
+
             </div>
-          </div>
+
         </div>
-      </section>
+        </section>
 
-      {/* EXPERIENCE */}
-      <section className="py-20 ">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-serif text-center mb-4">Külastage Atla Distilleryt</h2>
-          <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto">
-            Oma keel on kuningas!
+        {/* STORY */}
+        <section className="py-28">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-            Pakume suurepärast võimalust tutvuda meie tootmise, mõttelaadi ja toodetega. Erakordne võimalus nautida oma silmaga destilleerimisseadme tööd.
+            {/* IMAGE LEFT */}
+            <div className="relative h-105 rounded-2xl overflow-hidden">
 
-            ​
+            <img
+                src = {grupipilt}
+                alt="Atla distillery"
+                className="w-full h-full object-cover"
+            />
 
-            Grupihind 250 €, maksimaalselt 12 külastajat, suuremad seltskonnad erikokkuleppel
+            {/* dark overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
 
-            Degusteerimisel pakume meie kümmet napsu + uudisloome
-
-            Napsu kõrvale pakume suupisteid
-
-
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className=" rounded-3xl overflow-hidden">
-              <div className="h-80  flex items-center justify-center text-6xl">Img</div>
-              <div className="p-8">
-                <h3 className="text-2xl mb-3">Klassikaline ringkäik</h3>
-                <p className="text-zinc-400 mb-6">1,5h ekskursioon + tutvustus.</p>
-                <p className="text-amber-400 font-medium">45 € / inimene</p>
-              </div>
             </div>
 
-            <div className="bg-zinc-900 rounded-3xl overflow-hidden">
-              <div className="h-80  flex items-center justify-center text-6xl">Img</div>
-              <div className="p-8">
-                <h3 className="text-2xl mb-3">Premium degusteerimine</h3>
-                <p className="text-zinc-400 mb-6">5 joogi degusteerimine sommeljeega.</p>
-                <p className="text-amber-400 font-medium">75 € / inimene</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* TEXT RIGHT */}
+            <div>
 
-      {/* STORY */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="h-80  rounded-2xl"></div>
+            <h2 className="text-4xl font-serif mb-6">
+                Meie lugu
+            </h2>
 
-          <div>
-            <h2 className="text-4xl font-serif mb-6">Meie lugu</h2>
-            <p className="text-zinc-400 mb-6">
-Kõik saab alguse esimesest sammust. Oma rännakut unistuste ja maitsete maale alustasime 2017 aastal Atla mõisas, kus taastasime 1905. aastal katkenud viinapõletamise traditsiooni. Meie kirg on õunasiidrist õunapiirituse destilleerimine, edasi laseme joogil tammevaatides küpseda tippklassi maitsebuketiga õunabrändiks ja naudime kõik koos seda imelist tulemust. Armastame puhtaid, selgeid maitseid.
+            <p className="text-zinc-400 mb-6 leading-relaxed">
+                Kõik saab alguse esimesest sammust.  
+                Oma rännakut alustasime 2017. aastal Atla mõisas, kus taastasime
+                1905. aastal katkenud viinapõletamise traditsiooni.
             </p>
-            <p className="text-zinc-400 mb-6">
-              Põhjaliku vaagimse järel otsustasime viinaköögi sisseseade tellida Saksa ühelt tuntuimalt firmalt Müller Brennereianlagen GmbH.
+
+            <p className="text-zinc-400 mb-6 leading-relaxed">
+                Meie kirg on õunasiidrist destilleeritud piiritus, mis küpseb
+                tammevaatides aeglaselt – kuni saavutab oma iseloomu.
+                Puhtad maitsed. Selge mõte.
             </p>
-            <button className="text-amber-400">Loe rohkem →</button>
-          </div>
+
+            <button className="text-amber-400 hover:underline transition">
+                Loe rohkem →
+            </button>
+
+            </div>
+
         </div>
-      </section>
+        </section>
 
     </div>
   )

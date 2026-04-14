@@ -45,5 +45,61 @@ export const products = [
     price: 59,
     image: klaasid,
     category: "eriseeria"
-  }
+  },
+    {
+    id: 4,
+    name: "Ploomibrändi",
+    desc: "Rikkalik ja sügav maitse.",
+    price: 45,
+    image: kirsilikoor,
+    category: "brändi"
+  },
+    {
+    id: 5,
+    name: "Ploomibrändi",
+    desc: "Rikkalik ja sügav maitse.",
+    price: 45,
+    image: kirsilikoor,
+    category: "brändi"
+  },
+    {
+    id: 6,
+    name: "Ploomibrändi",
+    desc: "Rikkalik ja sügav maitse.",
+    price: 45,
+    image: kirsilikoor,
+    category: "brändi"
+  },
+    {
+    id: 7,
+    name: "Tammevaadi eriseeria",
+    desc: "Laagerdunud tammes, kompleksne.",
+    price: 59,
+    image: klaasid,
+    category: "eriseeria"
+  },
+    {
+    id: 8,
+    name: "Tammevaadi eriseeria",
+    desc: "Laagerdunud tammes, kompleksne.",
+    price: 59,
+    image: klaasid,
+    category: "eriseeria"
+  },
+    {
+    id: 9,
+    name: "Tammevaadi eriseeria",
+    desc: "Laagerdunud tammes, kompleksne.",
+    price: 59,
+    image: klaasid,
+    category: "eriseeria"
+  },
+    {
+    id: 10,
+    name: "Tammevaadi eriseeria",
+    desc: "Laagerdunud tammes, kompleksne.",
+    price: 59,
+    image: klaasid,
+    category: "eriseeria"
+  },
 ]

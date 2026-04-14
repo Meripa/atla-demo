@@ -121,74 +121,9 @@ const AboutPage = () => {
         </div>
         </section>
 
-      {/* STORY SPLIT */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-          {/* IMAGE */}
-          <div className="h-112.5 rounded-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1514361892635-cebb6b43c7f0"
-              className="w-full h-full object-cover"
-            />
-          </div>
 
-          {/* TEXT */}
-          <div>
-            <h2 className="text-3xl font-serif mb-6">
-              Algus
-            </h2>
 
-            <p className="text-zinc-400 leading-relaxed mb-6">
-              Meie teekond algas 2017. aastal Atla mõisas,
-              kus taaselustasime 1905. aastal katkenud
-              destilleerimise traditsiooni.
-            </p>
-
-            <p className="text-zinc-400 leading-relaxed">
-              Iga jook on loodud kannatlikkuse ja austusega
-              tooraine vastu - see on meie filosoofia.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* TIMELINE */}
-      <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-6">
-
-          <h2 className="text-4xl font-serif text-center mb-16">
-            Meie teekond
-          </h2>
-
-          <div className="space-y-10">
-
-            <div className="border-l border-amber-400 pl-6">
-              <h3 className="text-amber-400">2017</h3>
-              <p className="text-zinc-400">
-                Alustasime Atla mõisas destilleerimisega.
-              </p>
-            </div>
-
-            <div className="border-l border-amber-400 pl-6">
-              <h3 className="text-amber-400">2019</h3>
-              <p className="text-zinc-400">
-                Esimesed tooted jõudsid turule.
-              </p>
-            </div>
-
-            <div className="border-l border-amber-400 pl-6">
-              <h3 className="text-amber-400">Täna</h3>
-              <p className="text-zinc-400">
-                Arendame pidevalt uusi maitseid ja kogemusi.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
 
       {/* VALUES */}
       <section className="py-24 px-6">
