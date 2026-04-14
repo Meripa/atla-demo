@@ -290,9 +290,9 @@ function App() {
                 Puhtad maitsed. Selge mõte.
             </p>
 
-            <button className="text-amber-400 hover:underline transition">
+            <Link to="/meist" className="text-amber-400 hover:underline transition">
                 Loe rohkem →
-            </button>
+            </Link>
 
             </div>
 
