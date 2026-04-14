@@ -2,7 +2,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Rafale', sans-serif;
+  font-family: 'Solomon', sans-serif;
 
 }
 h1, h2, h3, h4, h5, h6 {
@@ -25,4 +25,9 @@ body {
 @font-face {
     font-family: "Rafale";
     src: url("assets/fonts/Rafale.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Solomon";
+    src: url("assets/fonts/Solomon.ttf") format("truetype");
 }
