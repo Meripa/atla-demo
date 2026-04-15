@@ -63,7 +63,7 @@ const Navbar = () => {
         </nav>
 
         {/* CTA */}
-        <button className="px-5 py-2.5 bg-yellow-700 hover:bg-yellow-600 text-zinc-950 text-sm font-medium rounded-full transition">
+        <button className="px-5 py-2.5 bg-(--bronze) hover:bg-(--bronze-light) text-zinc-950 text-sm font-medium rounded-full transition">
           Broneeri
         </button>
 

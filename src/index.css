@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  --bronze: #DD9222;
+  --bronze-light: #e6a94a;
+  --bronze-dark: #b5761a;
+}
+
 body {
   background: #09090b;
   color: white;
