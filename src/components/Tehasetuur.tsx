@@ -24,7 +24,7 @@ const Tehasetuur = () => {
             Vali, kas tuled meile külla või toome maitseelamuse sinu seltskonnani.
           </p>
 
-          <button className="px-8 py-3 bg-amber-500 text-black rounded-full hover:bg-amber-400 transition">
+          <button className="px-8 py-3 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light) transition">
             Võta ühendust →
           </button>
         </div>
@@ -57,11 +57,11 @@ const Tehasetuur = () => {
                   Tule meile külla, vaata destilleerimisprotsessi oma silmaga ning
                   saa osa ehtsast käsitööjoogi kogemusest.
                 </p>
-                <p className="text-amber-400 font-medium mb-5">
+                <p className="text-(--colorSecond-light) font-medium mb-5">
                   Alates 250 € / grupp
                 </p>
 
-                <button className="self-start px-6 py-3 border border-amber-400 rounded-full hover:bg-amber-400/10 transition">
+                <button className="self-start px-6 py-3 border border-(--colorSecond-light) rounded-full hover:bg-(--colorSecond-light)/10 transition">
                   Broneeri ringkäik →
                 </button>
               </div>
@@ -69,7 +69,7 @@ const Tehasetuur = () => {
           </div>
 
           {/* TULEME TEIE JUURDE */}
-          <div className="bg-zinc-900 rounded-3xl overflow-hidden group hover:scale-[1.02] transition duration-300 border border-amber-400/20">
+          <div className="bg-zinc-900 rounded-3xl overflow-hidden group hover:scale-[1.02] transition duration-300 border border-(--colorSecond-light)/20">
             <div className="relative h-105 overflow-hidden">
               <img
                 src={kohaleImg}
@@ -84,11 +84,11 @@ const Tehasetuur = () => {
                   Korraldame degustatsiooni või maitseelamuse sinu sündmusel,
                   ettevõttes või privaatsemas seltskonnas.
                 </p>
-                <p className="text-amber-400 font-medium mb-5">
+                <p className="text-(--colorSecond-light) font-medium mb-5">
                   Hind kokkuleppel
                 </p>
 
-                <button className="self-start px-6 py-3 bg-amber-500 text-black rounded-full hover:bg-amber-400 transition">
+                <button className="self-start px-6 py-3 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light) transition">
                   Küsi pakkumist →
                 </button>
               </div>
@@ -120,7 +120,7 @@ const Tehasetuur = () => {
           Leiame koos sobiva lahenduse sinu seltskonnale või sündmusele.
         </p>
 
-        <button className="px-10 py-4 bg-amber-500 text-black rounded-full text-lg hover:bg-amber-400 transition">
+        <button className="px-10 py-4 bg-(--colorSecond) text-black rounded-full text-lg hover:bg-(--colorSecond-light) transition">
           Kirjuta meile →
         </button>
       </section>

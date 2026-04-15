@@ -2,13 +2,13 @@
 
 :root {
     /* This is for main 2nd color*/
-  --bronze: #DD9222;
-  --bronze-light: #e6a94a;
+  --colorSecond: #DD9222;
+  --colorSecond-light: #e6a94a;
   --bronze-dark: #b5761a;
 }
 
 body {
-  background: #3030dd;
+  background: #18181b;
   color: white;
   font-family: "Solomon", sans-serif;
 }
@@ -37,10 +37,6 @@ h4{
   }
 }
 
-
-body {
-  background-color: #18181b; /* zinc-900 */
-}
 
 @font-face {
     font-family: "Lovelo";

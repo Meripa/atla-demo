@@ -50,24 +50,24 @@ const ContactPage = () => {
             <input
               type="text"
               placeholder="Nimi"
-              className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-amber-400"
+              className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-(--colorSecond-light)"
             />
 
             <input
               type="email"
               placeholder="Email"
-              className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-amber-400"
+              className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-(--colorSecond-light)"
             />
 
             <textarea
               placeholder="Sinu sõnum..."
               rows={4}
-              className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-amber-400"
+              className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-(--colorSecond-light)"
             />
 
             <button
               type="submit"
-              className="w-full py-3 bg-amber-500 text-black rounded-full hover:bg-amber-400"
+              className="w-full py-3 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light)"
             >
               Saada sõnum →
             </button>

@@ -64,11 +64,11 @@ const ProductsPage = () => {
             {/* RIGHT (PRICE + BUTTON) */}
             <div className="flex flex-col items-end gap-2 w-[35%]">
 
-            <p className="text-amber-400 text-lg tracking-wide">
+            <p className="text-(--colorSecond) text-lg tracking-wide">
                 {p.price} €
             </p>
 
-            <button className="px-4 py-1.5 border border-amber-500 text-sm rounded-full hover:bg-amber-500/10 transition">
+            <button className="px-4 py-1.5 border border-(--colorSecond) text-sm rounded-full hover:bg-(--colorSecond-light)/10 transition">
                 Lisa
             </button>
 

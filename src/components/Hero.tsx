@@ -52,7 +52,7 @@ function App() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-6 leading-tight">
             Eesti käsitööbrändi destilleerija,
             <br />
-            <span className="text-(--bronze)">kus aeg loob maitse</span>
+            <span className="text-(--colorSecond)">kus aeg loob maitse</span>
           </h1>
 
           <p className="text-lg sm:text-l text-zinc-300 max-w-lg mx-auto">
@@ -63,14 +63,14 @@ function App() {
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/tooted"
-              className="px-8 sm:px-10 py-3 sm:py-4 bg-(--bronze) hover:bg-(--bronze-light) text-zinc-950 font-medium rounded-full text-base sm:text-lg transition"
+              className="px-8 sm:px-10 py-3 sm:py-4 bg-(--colorSecond) hover:bg-(--colorSecond-light) text-zinc-950 font-medium rounded-full text-base sm:text-lg transition"
             >
               Avasta tooted
             </Link>
 
             <Link
               to="/tehasetuur"
-              className="px-8 sm:px-10 py-3 sm:py-4 border border-(--bronze) hover:bg-(--bronze)/10 rounded-full text-base sm:text-lg transition"
+              className="px-8 sm:px-10 py-3 sm:py-4 border border-(--colorSecond) hover:bg-(--colorSecond)/10 rounded-full text-base sm:text-lg transition"
             >
               Broneeri ringkäik
             </Link>
@@ -92,7 +92,7 @@ function App() {
 
         <div className="relative z-10 px-6 max-w-4xl">
           <p
-            className="text-3xl sm:text-4xl md:text-5xl text-(--bronze)"
+            className="text-3xl sm:text-4xl md:text-5xl text-(--colorSecond)"
             style={{ fontFamily: 'Vivaldi, cursive' }}
           >
 
@@ -149,11 +149,11 @@ function App() {
                   </div>
 
                   <div className="flex flex-col items-end gap-2 shrink-0">
-                    <p className="text-(--bronze) text-lg tracking-wide">
+                    <p className="text-(--colorSecond) text-lg tracking-wide">
                       {p.price} €
                     </p>
 
-                    <button className="px-4 py-1.5 border border-(--bronze) text-sm rounded-full hover:bg-(--bronze-light)/10 transition">
+                    <button className="px-4 py-1.5 border border-(--colorSecond) text-sm rounded-full hover:bg-(--colorSecond-light)/10 transition">
                       Lisa
                     </button>
                   </div>
@@ -165,7 +165,7 @@ function App() {
           <div className="mt-16 text-center">
             <Link
               to="/tooted"
-              className="px-8 py-3 border border-(--bronze) hover:bg-(--bronze-light)/10 rounded-full transition inline-block"
+              className="px-8 py-3 border border-(--colorSecond) hover:bg-(--colorSecond-light)/10 rounded-full transition inline-block"
             >
               Vaata kõiki tooteid →
             </Link>
@@ -209,11 +209,11 @@ function App() {
                   </p>
 
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-(--bronze)">{e.price}</p>
+                    <p className="text-(--colorSecond)">{e.price}</p>
 
                     <Link
                       to="/tehasetuur"
-                      className="px-5 py-2 border border-(--bronze) rounded-full text-sm hover:bg-(--bronze-light)/10 transition"
+                      className="px-5 py-2 border border-(--colorSecond) rounded-full text-sm hover:bg-(--colorSecond-light)/10 transition"
                     >
                       Loe täpsemalt
                     </Link>
@@ -255,7 +255,7 @@ function App() {
 
             <Link
               to="/meist"
-              className="text-(--bronze) hover:underline transition"
+              className="text-(--colorSecond) hover:underline transition"
             >
               Loe rohkem →
             </Link>

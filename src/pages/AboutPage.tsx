@@ -48,7 +48,7 @@ const AboutPage = () => {
                 </div>
 
                 <div>
-                <h3 className="text-amber-400 mb-3">2017</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">2017</h3>
                 <p className="text-zinc-400 leading-relaxed">
                     Kõik sai alguse Atla mõisas, kus taastasime 1905. aastal katkenud
                     viinapõletamise traditsiooni. Meie kirg on õunasiidrist
@@ -61,7 +61,7 @@ const AboutPage = () => {
             {/* 2018 */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
-                <h3 className="text-amber-400 mb-3">2018</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">2018</h3>
                 <p className="text-zinc-400 leading-relaxed">
                     Saime tegevusloa ning alustasime ametlikult tootmist.
                     Meie destillaator valmis koostöös Saksamaa tootjaga
@@ -88,7 +88,7 @@ const AboutPage = () => {
                 </div>
 
                 <div>
-                <h3 className="text-amber-400 mb-3">Kasv ja tunnustus</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">Kasv ja tunnustus</h3>
                 <p className="text-zinc-400 leading-relaxed">
                     Meie tooted on võitnud auhindu Berliinis, Londonis ja USA-s.
                     2019. aastal tõime Berliinist pronksi, 2020. aastal juba hõbedad
@@ -100,7 +100,7 @@ const AboutPage = () => {
             {/* TODAY */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
-                <h3 className="text-amber-400 mb-3">Täna</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">Täna</h3>
                 <p className="text-zinc-400 leading-relaxed">
                     Tegutseme neljas suunas: käsitöönapsud, alkoholivabad joogid,
                     teenustöö teistele tootjatele ja joogikultuuri edendamine.
@@ -136,7 +136,7 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-3 gap-12">
 
             <div className="p-6 bg-zinc-900 rounded-2xl">
-              <h3 className="text-xl text-amber-400 mb-3">
+              <h3 className="text-xl text-(--colorSecond-light) mb-3">
                 Käsitöö
               </h3>
               <p className="text-zinc-400 text-sm">
@@ -145,7 +145,7 @@ const AboutPage = () => {
             </div>
 
             <div className="p-6 bg-zinc-900 rounded-2xl">
-              <h3 className="text-xl text-amber-400 mb-3">
+              <h3 className="text-xl text-(--colorSecond-light) mb-3">
                 Aeg
               </h3>
               <p className="text-zinc-400 text-sm">
@@ -154,7 +154,7 @@ const AboutPage = () => {
             </div>
 
             <div className="p-6 bg-zinc-900 rounded-2xl">
-              <h3 className="text-xl text-amber-400 mb-3">
+              <h3 className="text-xl text-(--colorSecond-light) mb-3">
                 Tooraine
               </h3>
               <p className="text-zinc-400 text-sm">
@@ -184,7 +184,7 @@ const AboutPage = () => {
           Külastage meie destilleerimiskoda ja avastage Atla maailm.
         </p>
 
-        <button className="px-10 py-4 bg-amber-500 text-black rounded-full hover:bg-amber-400">
+        <button className="px-10 py-4 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light)">
           Broneeri külastus →
         </button>
       </section>
