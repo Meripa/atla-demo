@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2 text-zinc-400">
               <Link to="/">Avaleht</Link>
               <Link to="/tooted">Tooted</Link>
-              <Link to="/kylastus">Ringkäigud</Link>
+              <Link to="/tehasetuur">Tehas</Link>
             </div>
           </div>
 
