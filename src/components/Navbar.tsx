@@ -49,7 +49,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="Atla Distillery" 
-            className="h-14 md:h-16 object-contain"
+            className="h-14 md:h-16 object-contain scale-200"
           />
         </Link>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
         </nav>
 
         {/* CTA */}
-        <button className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-zinc-950 text-sm font-medium rounded-full transition">
+        <button className="px-5 py-2.5 bg-yellow-700 hover:bg-yellow-600 text-zinc-950 text-sm font-medium rounded-full transition">
           Broneeri
         </button>
 

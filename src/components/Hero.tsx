@@ -3,9 +3,11 @@ import { products } from '../data/products'
 
 import Meiekirg from '../assets/Meiekirg.jpg'
 import logo from '../assets/logo.png'
-import tehasetuur from '../assets/tehasetuur.png'
+import tehasetuur from '../assets/aboutpage/masin.png'
 import sinujuurde from '../assets/sinujuurde.png'
 import grupipilt from '../assets/aboutpage/grupipilt.jpg'
+// Bronze tone for texts
+
 
 // Front products
 const featuredIds = [1, 3, 5]
@@ -51,7 +53,7 @@ function App() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-6 leading-tight">
             Eesti käsitööbrändi destilleerija,
             <br />
-            <span className="text-amber-400">kus aeg loob maitse</span>
+            <span className = 'text-yellow-700'>kus aeg loob maitse</span>
           </h1>
 
           <p className="text-lg sm:text-l text-zinc-300 max-w-lg mx-auto">
@@ -62,14 +64,14 @@ function App() {
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/tooted"
-              className="px-8 sm:px-10 py-3 sm:py-4 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-medium rounded-full text-base sm:text-lg transition"
+              className="px-8 sm:px-10 py-3 sm:py-4 bg-yellow-700 hover:bg-yellow-700 text-zinc-950 font-medium rounded-full text-base sm:text-lg transition"
             >
               Avasta tooted
             </Link>
 
             <Link
               to="/tehasetuur"
-              className="px-8 sm:px-10 py-3 sm:py-4 border border-amber-400 hover:bg-amber-400/10 rounded-full text-base sm:text-lg transition"
+              className="px-8 sm:px-10 py-3 sm:py-4 border border-yellow-700 hover:bg-yellow-700/10 rounded-full text-base sm:text-lg transition"
             >
               Broneeri ringkäik
             </Link>
@@ -87,11 +89,11 @@ function App() {
           />
         </div>
 
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 "></div>
 
         <div className="relative z-10 px-6 max-w-4xl">
           <p
-            className="text-3xl sm:text-4xl md:text-5xl text-amber-400"
+            className="text-3xl sm:text-4xl md:text-5xl text-yellow-700"
             style={{ fontFamily: 'Vivaldi, cursive' }}
           >
 
@@ -117,14 +119,23 @@ function App() {
                 key={p.id}
                 className="group bg-zinc-900/50 rounded-2xl overflow-hidden hover:bg-zinc-900 transition duration-300"
               >
+                {/* IMAGE */}
                 <Link to={`/tooted/${p.id}`}>
-                  <div className="h-[300px] flex items-center justify-center p-8 bg-zinc-900">
+                <div className="relative overflow-hidden">
+
                     <img
-                      src={p.image}
-                      alt={p.name}
-                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-700"
+                    src={p.image}
+                    alt={p.name}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition duration-700"
                     />
-                  </div>
+
+                    {/* OVERLAY */}
+                    <div className="absolute inset-0 bg-black/25"></div>
+
+                    {/* PRICE TOP RIGHT */}
+
+
+                </div>
                 </Link>
 
                 <div className="px-4 py-4 flex justify-between items-start gap-4">
@@ -139,11 +150,11 @@ function App() {
                   </div>
 
                   <div className="flex flex-col items-end gap-2 shrink-0">
-                    <p className="text-amber-400 text-lg tracking-wide">
+                    <p className="text-yellow-700 text-lg tracking-wide">
                       {p.price} €
                     </p>
 
-                    <button className="px-4 py-1.5 border border-amber-500 text-sm rounded-full hover:bg-amber-500/10 transition">
+                    <button className="px-4 py-1.5 border border-yellow-700 text-sm rounded-full hover:bg-yellow-700/10 transition">
                       Lisa
                     </button>
                   </div>
@@ -155,7 +166,7 @@ function App() {
           <div className="mt-16 text-center">
             <Link
               to="/tooted"
-              className="px-8 py-3 border border-amber-400 hover:bg-amber-400/10 rounded-full transition inline-block"
+              className="px-8 py-3 border border-yellow-700 hover:bg-yellow-700/10 rounded-full transition inline-block"
             >
               Vaata kõiki tooteid →
             </Link>
@@ -199,11 +210,11 @@ function App() {
                   </p>
 
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-amber-400">{e.price}</p>
+                    <p className="text-yellow-700">{e.price}</p>
 
                     <Link
                       to="/tehasetuur"
-                      className="px-5 py-2 border border-amber-400 rounded-full text-sm hover:bg-amber-400/10 transition"
+                      className="px-5 py-2 border border-yellow-700 rounded-full text-sm hover:bg-yellow-700/10 transition"
                     >
                       Loe täpsemalt
                     </Link>
@@ -245,7 +256,7 @@ function App() {
 
             <Link
               to="/meist"
-              className="text-amber-400 hover:underline transition"
+              className="text-yellow-700 hover:underline transition"
             >
               Loe rohkem →
             </Link>

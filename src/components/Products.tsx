@@ -46,29 +46,33 @@ const ProductsPage = () => {
             </Link>
 
         {/* TEXT + RIGHT SIDE */}
-        <div className="px-5 py-4 flex justify-between items-start">
+        <div className="px-5 py-4 flex flex-col gap-4">
 
-        {/* LEFT */}
-        <div className="max-w-[70%]">
-            <h3 className="text-lg font-serif tracking-wide mb-1">
+        {/* NAME TOP */}
+        <h4 className="text-lg font-serif tracking-wide">
             {p.name}
-            </h3>
+        </h4>
 
-            <p className="text-zinc-500 text-sm leading-relaxed">
+        {/* BOTTOM ROW */}
+        <div className="flex justify-between items-start gap-4">
+
+            {/* LEFT (DESC) */}
+            <p className="text-zinc-500 text-sm leading-relaxed w-[65%] line-clamp-2">
             {p.desc}
             </p>
-        </div>
 
-        {/* RIGHT */}
-        <div className="flex flex-col items-end gap-2">
+            {/* RIGHT (PRICE + BUTTON) */}
+            <div className="flex flex-col items-end gap-2 w-[35%]">
 
             <p className="text-amber-400 text-lg tracking-wide">
-            {p.price} €
+                {p.price} €
             </p>
 
             <button className="px-4 py-1.5 border border-amber-500 text-sm rounded-full hover:bg-amber-500/10 transition">
-            Lisa
+                Lisa
             </button>
+
+            </div>
 
         </div>
 
