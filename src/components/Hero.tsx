@@ -42,7 +42,7 @@ function App() {
                 opacity-95
                 object-contain
                 transition duration-500
-                scale-[1.15]
+                scale-[1.5]
                 -translate-y-4
               "
             />
@@ -54,7 +54,7 @@ function App() {
             <span className="text-amber-400">kus aeg loob maitse</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-zinc-300 max-w-lg mx-auto">
+          <p className="text-lg sm:text-l text-zinc-300 max-w-lg mx-auto">
             Väikeses Eesti külas valmiv premium käsitööalkohol, kus traditsioon
             kohtub kvaliteediga.
           </p>
