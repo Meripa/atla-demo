@@ -10,7 +10,6 @@ import inglismaa from '../assets/navbar/inglismaa.png'
 const Navbar = () => {
   const [show, setShow] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
-  const [open, setOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
   const [lang, setLang] = useState('ET')
 
@@ -50,8 +49,8 @@ const Navbar = () => {
             {/* LEFT NAV */}
             <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute left-[12%]">
             <Link to="/" className="text-zinc-400 hover:text-[var(--bronze)] transition">Avaleht</Link>
-            <Link to="/tooted" className="text-zinc-400 hover:text-[var(--bronze)] transition">Tooted</Link>
-            <Link to="/meist" className="text-zinc-400 hover:text-[var(--bronze)] transition">Meie lugu</Link>
+            <Link to="/tooted" className="text-zinc-400 hover:text-(--bronze) transition">Tooted</Link>
+            <Link to="/meist" className="text-zinc-400 hover:text-(--bronze) transition">Meie lugu</Link>
             </nav>
 
             {/* LOGO CENTER */}
@@ -61,9 +60,9 @@ const Navbar = () => {
 
             {/* RIGHT NAV */}
             <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute right-[20%]">
-            <Link to="/tehasetuur" className="text-zinc-400 hover:text-[var(--bronze)] transition">Tehas</Link> 
-            <Link to="/blogi" className="text-zinc-400 hover:text-[var(--bronze)] transition">Blogi</Link>
-            <Link to="/kontakt" className="text-zinc-400 hover:text-[var(--bronze)] transition">Kontakt</Link>
+            <Link to="/tehasetuur" className="text-zinc-400 hover:text-(--bronze) transition">Tehas</Link> 
+            <Link to="/blogi" className="text-zinc-400 hover:text-(--bronze) transition">Blogi</Link>
+            <Link to="/kontakt" className="text-zinc-400 hover:text-(--bronze) transition">Kontakt</Link>
             </nav>
 
             {/* LANGUAGE + CTA */}
@@ -74,7 +73,7 @@ const Navbar = () => {
             {/* BUTTON */}
             <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-2 border border-zinc-700 rounded-full px-3 py-1 text-xs uppercase tracking-widest text-zinc-400 hover:text-[var(--bronze)] transition"
+                className="flex items-center gap-2 border border-zinc-700 rounded-full px-3 py-1 text-xs uppercase tracking-widest text-zinc-400 hover:text-(--bronze) transition"
             >
                 <span>
                 {lang === 'ET' && <img src={eesti} alt="Atla" className="h-2 md:h-4 object-contain rounded" />}
