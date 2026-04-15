@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { products } from '../data/products'
 
-import Meiekirg from '../assets/Meiekirg.jpg'
+// import Meiekirg from '../assets/Meiekirg.jpg'
 import logo from '../assets/logo.png'
 import tehasetuur from '../assets/aboutpage/masin.png'
 import sinujuurde from '../assets/sinujuurde.png'
