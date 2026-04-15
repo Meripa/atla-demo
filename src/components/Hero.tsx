@@ -78,7 +78,7 @@ function App() {
         </div>
       </section>
 
-      {/* BRAND STATEMENT */}
+      {/* BRAND STATEMENT 
       <section className="relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -99,7 +99,7 @@ function App() {
           </p>
         </div>
       </section>
-
+        */}
       {/* PRODUCTS */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">

@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --bronze: #E09C36;
+    /* This is for main 2nd color*/
+  --bronze: #DD9222;
   --bronze-light: #e6a94a;
   --bronze-dark: #b5761a;
 }
