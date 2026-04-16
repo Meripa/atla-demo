@@ -54,15 +54,11 @@ function CocktailsPage() {
             </p>
 
             <h1 className="text-4xl md:text-6xl font-serif leading-tight mb-6">
-              Kokteilid, mis
+              Atla joogid on kogemus omaette.
               <br />
-              loovad atmosfääri
+              Tarvitada nautides!
             </h1>
 
-            <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-[520px]">
-              Atla joogid on kogemus omaette. <br></br>
-              Tarvitada nautides!
-            </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
