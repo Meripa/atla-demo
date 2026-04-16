@@ -1,10 +1,15 @@
 import { products } from "../data/products"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+import taust from "../assets/4.png"
 
 const Products = () => {
   return (
     <div className="min-h-screen text-white pt-[140px] px-6">
+      <div
+        className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-20"
+        style={{ backgroundImage: taust }}
+      />
 
       {/* GLOBAL BG (kui pole Appis) */}
       <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />

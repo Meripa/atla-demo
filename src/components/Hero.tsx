@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 // import Meiekirg from '../assets/Meiekirg.jpg'
 import logo from '../assets/logo.png'
 
+import taust from "../assets/4.png"
 import grupipilt from '../assets/aboutpage/grupipilt.jpg'
 import bottle from '../assets/bottle.png'
 import masintuur from '../assets/meesmasinaga.png'

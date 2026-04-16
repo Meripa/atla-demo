@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
     /* This is for main 2nd color*/
   --colorSecond: #DD9222;
@@ -8,7 +9,7 @@
 }
 
 body {
-  background: #111111;
+  background: black;
   color: white;
   font-family: "Solomon", sans-serif;
 }
