@@ -1,7 +1,7 @@
 import { products } from "../data/products"
 import { Link } from "react-router-dom"
 
-const ProductsPage = () => {
+const Products = () => {
   return (
     <div className=" text-white min-h-screen pt-32 px-6">
 
@@ -87,4 +87,4 @@ const ProductsPage = () => {
   )
 }
 
-export default ProductsPage
+export default Products

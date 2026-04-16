@@ -1,6 +1,6 @@
-import Tehasetuur from '../components/Tehasetuur'
+import Cocktails from '../components/Cocktails'
 import { motion } from "framer-motion"
-const TehasetuurPage = () => {
+const CocktailsPage = () => {
   return (
     <>
     <motion.div
@@ -8,10 +8,10 @@ const TehasetuurPage = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      <Tehasetuur />
+      <Cocktails />
     </motion.div>
     </>
   )
 }
 
-export default TehasetuurPage
+export default CocktailsPage

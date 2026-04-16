@@ -1,7 +1,17 @@
-const blog = () => {
+import Blog from '../components/Blog'
+import { motion } from "framer-motion"
+const BlogPage = () => {
   return (
-    <div>Tere Teile :D</div>
+    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
+      <Blog />
+    </motion.div>
+    </>
   )
 }
 
-export default blog
+export default BlogPage

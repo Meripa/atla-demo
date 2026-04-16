@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { products } from '../data/products'
+import { motion } from "framer-motion"
 
 // import Meiekirg from '../assets/Meiekirg.jpg'
 import logo from '../assets/logo.png'
 import tehasetuur from '../assets/aboutpage/masin.png'
 import sinujuurde from '../assets/sinujuurde.png'
 import grupipilt from '../assets/aboutpage/grupipilt.jpg'
+import bottle from '../assets/bottle.png'
+import masintuur from '../assets/masintuur.png'
 
 
 // Front products
@@ -32,51 +35,110 @@ function App() {
   return (
     <div className="min-h-screen text-white">
       {/* HERO */}
-      <section className="min-h-screen flex items-center relative">
-        <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
-          <div className="mb-2 flex justify-center">
-            <img
-              src={logo}
-              alt="Atla"
-              className="
-                h-40 sm:h-48 md:h-56 lg:h-64
-                opacity-95
-                object-contain
-                transition duration-500
-                scale-[1.5]
-                -translate-y-4
-              "
-            />
-          </div>
+      <section className="relative w-full overflow-hidden bg-black">
 
+        {/* background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
+
+
+        {/* content */}
+        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 py-[120px] md:py-[160px]">
+
+          {/* logo */}
+          <img
+            src={logo}
+            alt="Atla"
+            className="h-32 sm:h-40 md:h-48 object-contain mb-6"
+          />
+
+          {/* heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-6 leading-tight">
             Eesti käsitööbrändi destilleerija,
             <br />
-            <span className="text-(--colorSecond)">kus aeg loob maitse</span>
+            <span className="text-[var(--colorSecond)]">
+              kus aeg loob maitse
+            </span>
           </h1>
 
-          <p className="text-lg sm:text-l text-zinc-300 max-w-lg mx-auto">
-            Väikeses Eesti külas valmiv premium käsitööalkohol, kus traditsioon
-            kohtub kvaliteediga.
+          {/* text */}
+          <p className="text-zinc-300 max-w-lg mb-10">
+            Väikeses Eesti külas valmiv premium käsitööalkohol,
+            kus traditsioon kohtub kvaliteediga.
           </p>
 
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+          {/* buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+
             <Link
               to="/tooted"
-              className="px-8 sm:px-10 py-3 sm:py-4 bg-(--colorSecond) hover:bg-(--colorSecond-light) text-zinc-950 font-medium rounded-full text-base sm:text-lg transition"
+              className="px-8 py-3 bg-[var(--colorSecond)] text-zinc-950 rounded-full tracking-widest text-sm hover:opacity-90 transition"
             >
-              Avasta tooted
+              AVASTA TOOTED
             </Link>
 
             <Link
               to="/tehasetuur"
-              className="px-8 sm:px-10 py-3 sm:py-4 border border-(--colorSecond) hover:bg-(--colorSecond)/10 rounded-full text-base sm:text-lg transition"
+              className="px-8 py-3 border border-[var(--colorSecond)] rounded-full tracking-widest text-sm hover:bg-[var(--colorSecond)]/10 transition"
             >
-              Broneeri ringkäik
+              BRONEERI RINGKÄIK
             </Link>
+
           </div>
+
         </div>
       </section>
+
+
+    {/* Viski pilt */}
+    <section className="relative w-full overflow-hidden min-h-[700px] md:min-h-[850px]" >
+
+      {/* 🔥 CENTERED BACKGROUND (EI VENI) */}
+      <div className="absolute inset-0 flex justify-center">
+        <div className="w-full max-w-[2000px] h-full  relative overflow-hidden">
+
+          <motion.img
+            src={bottle}
+            alt="Atla Whiskey"
+            className="w-full h-full object-cover"
+            initial={{ scale: 1.1, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          />
+
+          {/* overlay */}
+          <div className="absolute inset-0 bg-black/40" />
+
+          {/* gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black/90" />
+        </div>
+      </div>
+
+      {/* 🧠 CONTENT WRAPPER */}
+    <div className="relative z-10 flex items-end pb-[80px] md:pb-[120px]">
+      <div className="w-full max-w-[1300px] mx-auto px-6 text-center">
+
+        <motion.div
+          className="flex flex-col items-center h-[200px] justify-between mt-20 md:mt-130"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+
+          <p className="text-gray-300 max-w-md mx-auto">
+            Meie signatuurjook – tugev, tasakaalus ja meeldejääv.
+          </p>
+
+          <button className="px-8 py-3 border border-white text-white tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+            VAATA ROHKEM
+          </button>
+
+        </motion.div>
+
+      </div>
+    </div>
+
+    </section>
+
 
       {/* BRAND STATEMENT 
       <section className="relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
@@ -102,8 +164,11 @@ function App() {
         */}
       {/* PRODUCTS */}
       <section className="py-24">
+        
         <div className="max-w-6xl mx-auto px-6">
+          
           <h2 className="text-4xl font-serif text-center mb-4">
+            
             Valik hetkedeks, mis väärivad aega
           </h2>
 
@@ -174,56 +239,63 @@ function App() {
       </section>
 
       {/* EXPERIENCE */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-serif text-center mb-4">
-            Külastage Atla Distilleryt
-          </h2>
+    <section className="relative w-full overflow-hidden min-h-[700px] md:min-h-[850px]">
 
-          <p className="text-center text-zinc-400 mb-16 max-w-2xl mx-auto leading-relaxed">
-            Võimalus kogeda tootmist lähedalt. Näha, kuidas aeg ja tooraine
-            loovad maitse.
-          </p>
+      {/* 🔥 CENTERED BACKGROUND */}
+      <div className="absolute inset-0 flex justify-center">
+        <div className="w-full max-w-[2000px] h-full relative overflow-hidden">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {experiences.map((e, i) => (
-              <div
-                key={i}
-                className="group relative rounded-3xl overflow-hidden"
-              >
-                <div className="h-[420px] overflow-hidden">
-                  <img
-                    src={e.image}
-                    alt={e.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                  />
-                </div>
+          <img
+            src={masintuur}
+            alt="Atla Tehas"
+            className="w-full h-full object-cover object-center"
+          />
 
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
-
-                <div className="absolute bottom-0 p-8 w-full">
-                  <h3 className="text-2xl font-serif mb-2">{e.title}</h3>
-
-                  <p className="text-zinc-300 text-sm mb-4 max-w-sm">
-                    {e.desc}
-                  </p>
-
-                  <div className="flex items-center justify-between gap-4">
-                    <p className="text-(--colorSecond)">{e.price}</p>
-
-                    <Link
-                      to="/tehasetuur"
-                      className="px-5 py-2 border border-(--colorSecond) rounded-full text-sm hover:bg-(--colorSecond-light)/10 transition"
-                    >
-                      Loe täpsemalt
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
         </div>
-      </section>
+      </div>
+
+      {/* 🧠 CONTENT */}
+      <div className="relative z-10 flex items-end min-h-[700px] md:min-h-[800px]  pb-[120px] md:pb-[160px]">
+        <div className="w-full max-w-[1200px] mx-auto px-6">
+
+          <motion.div
+            className="flex justify-end"
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+
+            <div className="bg-gray/90  p-10 md:p-12 max-w-md text-white shadow-2xl">
+
+              <h2 className="text-3xl md:text-4xl tracking-[0.25em] font-light mb-6">
+                TEHASETUUR
+              </h2>
+
+              <p className="text-gray-300 text-sm leading-relaxed mb-8">
+                Tule avasta, kuidas sünnivad meie joogid. Degusteerimine,
+                tootmisprotsess ja elamus ühes kohas.
+              </p>
+
+              <div className="flex flex-col gap-4">
+                <Link to="/tehasetuur" className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                  TULE KÜLLA
+                </Link>
+
+                <Link to="/tehasetuur" className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                  TULEME SINU JUURDE
+                </Link>
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+      </div>
+
+    </section>
 
       {/* STORY */}
       <section className="py-28">

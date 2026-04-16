@@ -1,9 +1,15 @@
 import Products from '../components/Products'
-
+import { motion } from "framer-motion"
 const ProductsPage = () => {
   return (
     <>
-    <Products />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
+      <Products />
+    </motion.div>
     </>
   )
 }

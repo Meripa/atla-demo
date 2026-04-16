@@ -47,10 +47,11 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 h-20 md:h-35 flex items-center justify-center relative">
 
             {/* LEFT NAV */}
-            <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute left-[12%]">
+            <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute left-[10%]">
             <Link to="/" className="text-zinc-400 hover:text-[var(--bronze)] transition">Avaleht</Link>
             <Link to="/tooted" className="text-zinc-400 hover:text-(--bronze) transition">Tooted</Link>
             <Link to="/meist" className="text-zinc-400 hover:text-(--bronze) transition">Meie lugu</Link>
+            <Link to="/kokteilid" className="text-zinc-400 hover:text-(--bronze) transition">Kokteilid</Link>
             </nav>
 
             {/* LOGO CENTER */}
