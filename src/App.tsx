@@ -15,6 +15,7 @@ import CocktailsPage from './pages/CocktailsPage.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    
     <Route path='/' element={<MainLayout />}>
       <Route index element={<HomePage />}/>
       <Route path="/tooted" element={<ProductsPage />} />
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path='/blogi' element={<BlogPage />} />
       <Route path='/kokteilid' element={<CocktailsPage />} />
     </Route>
+    
     )
 )
 

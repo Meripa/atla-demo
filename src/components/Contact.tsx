@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
-    <div className="bg-zinc-950 text-white min-h-screen pt-32">
-
+    <div className=" text-white min-h-screen pt-32">
+    <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
       {/* HERO */}
       <section className="text-center px-6 mb-16">
         <h1 className="text-5xl font-serif mb-4">

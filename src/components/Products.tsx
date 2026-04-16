@@ -1,88 +1,95 @@
 import { products } from "../data/products"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
 const Products = () => {
   return (
-    <div className=" text-white min-h-screen pt-32 px-6">
+    <div className="min-h-screen text-white pt-[140px] px-6">
+
+      {/* GLOBAL BG (kui pole Appis) */}
+      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
 
       {/* HEADER */}
-      <div className="max-w-4xl mx-auto text-center mb-24">
-        <h1 className="text-5xl md:text-6xl font-serif mb-6 tracking-wide">
+      <div className="max-w-3xl mx-auto text-center mb-20">
+        <p className="text-xs tracking-[0.3em] uppercase text-[var(--colorSecond)] opacity-80 mb-4">
+          Atla Distillery
+        </p>
+
+        <h1 className="text-4xl md:text-6xl font-serif mb-6 tracking-wide">
           Meie joogid
         </h1>
 
-        <p className="text-zinc-400 leading-relaxed max-w-xl mx-auto">
-          Liisi, anna siia teksti palun
-           Aitäh :D
+        <p className="text-zinc-400 leading-relaxed max-w-lg mx-auto">
+          Iga jook on loodud aeglaselt ja teadlikult – tasakaalus maitse,
+          puhas karakter ja hetk, mida tasub nautida.
         </p>
       </div>
 
       {/* GRID */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 items-stretch">
 
-        {products.map((p) => (
-        <div
+        {products.map((p, index) => (
+          <motion.div
             key={p.id}
-            className="group bg-zinc-900/50 rounded-2xl overflow-hidden hover:bg-zinc-900 transition duration-300"
-        >
+            className="h-full"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            viewport={{ once: true }}
+          >
 
-            {/* IMAGE */}
-            <Link to={`/tooted/${p.id}`}>
-            <div className="relative overflow-hidden">
+            <Link to={`/tooted/${p.id}`} className="group block h-full">
 
-                <img
-                src={p.image}
-                alt={p.name}
-                className="w-full h-70 object-cover group-hover:scale-105 transition duration-700"
-                />
+              <div className="h-full flex flex-col bg-zinc-900/40 rounded-2xl overflow-hidden hover:bg-zinc-900 hover:shadow-2xl transition duration-300">
 
-                {/* OVERLAY */}
-                <div className="absolute inset-0 bg-black/25"></div>
+                {/* IMAGE */}
+                <div className="p-5 pb-0">
+                  <div className="relative overflow-hidden rounded-xl">
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition duration-700"
+                    />
+                    <div className="absolute inset-0 bg-black/20" />
+                  </div>
+                </div>
 
-                {/* PRICE TOP RIGHT */}
+                {/* CONTENT */}
+                <div className="px-5 py-5 flex flex-col flex-grow">
 
+                  {/* NAME */}
+                  <h4 className="text-lg font-serif tracking-wide mb-2">
+                    {p.name}
+                  </h4>
 
-            </div>
+                  {/* DESC */}
+                  <p className="text-zinc-500 text-sm leading-relaxed line-clamp-2">
+                    {p.desc}
+                  </p>
+
+                  {/* BOTTOM */}
+                  <div className="mt-auto flex justify-between items-center pt-4">
+
+                    <p className="text-[var(--colorSecond)] text-lg tracking-wide">
+                      {p.price} €
+                    </p>
+
+                    <button className="px-4 py-1.5 border border-[var(--colorSecond)] text-xs tracking-widest uppercase rounded-full hover:bg-[var(--colorSecond)]/10 transition">
+                      Lisa
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
+
             </Link>
 
-        {/* TEXT + RIGHT SIDE */}
-        <div className="px-5 py-4 flex flex-col gap-4">
-
-        {/* NAME TOP */}
-        <h4 className="text-lg font-serif tracking-wide">
-            {p.name}
-        </h4>
-
-        {/* BOTTOM ROW */}
-        <div className="flex justify-between items-start gap-4">
-
-            {/* LEFT (DESC) */}
-            <p className="text-zinc-500 text-sm leading-relaxed w-[65%] line-clamp-2">
-            {p.desc}
-            </p>
-
-            {/* RIGHT (PRICE + BUTTON) */}
-            <div className="flex flex-col items-end gap-2 w-[35%]">
-
-            <p className="text-(--colorSecond) text-lg tracking-wide">
-                {p.price} €
-            </p>
-
-            <button className="px-4 py-1.5 border border-(--colorSecond) text-sm rounded-full hover:bg-(--colorSecond-light)/10 transition">
-                Lisa
-            </button>
-
-            </div>
-
-        </div>
-
-        </div>
-
-        </div>
+          </motion.div>
         ))}
 
       </div>
-
     </div>
   )
 }

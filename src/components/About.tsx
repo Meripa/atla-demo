@@ -6,30 +6,51 @@ import tana from '../assets/aboutpage/tana.jpg'
 
 const About = () => {
   return (
-    <div className="bg-zinc-950 text-white min-h-screen ">
-
+    <div className=" text-white min-h-screen pt-10 px-6">
+      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
       {/* HERO */}
-      <section className="relative h-[90vh] flex items-center justify-center text-center">
-        <div className="absolute inset-0">
-            <img
+    <section className="relative w-full overflow-hidden min-h-[800px] md:min-h-[850px] flex items-center">
+
+      {/* 🔥 CENTERED BACKGROUND (ei veni lõpmatuseni) */}
+      <div className="absolute inset-0 flex justify-center">
+        <div className="w-full max-w-[2000px] h-full relative overflow-hidden">
+
+          <img
             src={grupipilt}
             alt="Atla distillery"
-            className="w-full h-full object-cover object-[center_20%]"
-            />
-        </div>
-        <div className="absolute inset-0 bg-black/50"></div>
+            className="w-full h-full object-cover object-[center_20%] scale-105"
+          />
 
-        <div className="relative z-10 px-6">
-          <h1 className="text-5xl md:text-7xl font-serif mb-6">
-            Meie lugu
-          </h1>
-          <p className="text-zinc-300 max-w-xl mx-auto text-lg">
-            Traditsioon, aeg ja käsitöö – Atla olemus igas tilgas.
-          </p>
-        </div>
-      </section>
+          {/* dark overlay */}
+          <div className="absolute inset-0 bg-black/60" />
 
-    <section className="py-24 bg-black">
+          {/* gradient depth */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80" />
+
+        </div>
+      </div>
+
+      {/* 🧠 CONTENT */}
+    <div className="relative z-10 w-full max-w-[450px] mx-auto px-6">
+
+      <div className="text-center md:text-left space-y-6">
+
+        {/* heading */}
+        <h1 className="text-4xl md:text-6xl font-serif leading-tight tracking-wide">
+          Meie lugu
+        </h1>
+
+        {/* text */}
+        <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-md">
+          Traditsioon, aeg ja käsitöö – Atla olemus igas tilgas.
+        </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section className="py-24 ">
         <div className="max-w-6xl mx-auto px-6">
 
             <h2 className="text-4xl font-serif text-center mb-20">
@@ -158,20 +179,13 @@ const About = () => {
                 Tooraine
               </h3>
               <p className="text-zinc-400 text-sm">
-                Kasutame Eesti parimat toorainet.
+                Kasutame parimat toorainet.
               </p>
             </div>
 
           </div>
 
         </div>
-      </section>
-
-      {/* QUOTE */}
-      <section className="py-24 bg-black text-center px-6">
-        <p className="text-2xl font-serif max-w-2xl mx-auto text-zinc-300">
-          “Hea jook ei sünni kiirustades.”
-        </p>
       </section>
 
       {/* CTA */}

@@ -11,7 +11,7 @@ import masintuur from '../assets/masintuur.png'
 
 
 // Front products
-const featuredIds = [1, 3, 5]
+const featuredIds = [1, 5]
 const featuredProducts = products.filter((p) => featuredIds.includes(p.id))
 
 
@@ -19,10 +19,10 @@ function App() {
   return (
     <div className="min-h-screen text-white">
       {/* HERO */}
-      <section className="relative w-full overflow-hidden bg-black">
+      <section className="relative w-full overflow-hidden  ">
 
         {/* background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
+
 
 
         {/* content */}
@@ -75,7 +75,7 @@ function App() {
 
     {/* Viski pilt */}
     <section className="relative w-full overflow-hidden min-h-[700px] md:min-h-[850px]" >
-
+      
       {/* 🔥 CENTERED BACKGROUND (EI VENI) */}
       <div className="absolute inset-0 flex justify-center">
         <div className="w-full max-w-[2000px] h-full  relative overflow-hidden">
@@ -147,80 +147,91 @@ function App() {
       </section>
         */}
       {/* PRODUCTS */}
-      <section className="py-24">
-        
-        <div className="max-w-6xl mx-auto px-6">
-          
-          <h2 className="text-4xl font-serif text-center mb-4">
-            
-            Valik hetkedeks, mis väärivad aega
-          </h2>
+    <section className="py-[600px] md:py-[140px]">
+      <div className="max-w-[800px] mx-auto px-6">
+        <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
+        {/* HEADER */}
+        <h2 className="text-4xl md:text-5xl font-serif text-center mb-6">
+          Valik hetkedeks, mis väärivad aega
+        </h2>
 
-          <p className="text-center text-zinc-400 mb-16 max-w-2xl mx-auto leading-relaxed">
-            Need joogid ei ole juhuslik valik. Igaüks neist on kujunenud
-            aeglaselt ja teadlikult.
-          </p>
+        <p className="text-center text-zinc-400 mb-16 max-w-xl mx-auto leading-relaxed">
+          Need joogid ei ole juhuslik valik. Igaüks neist on kujunenud
+          aeglaselt ja teadlikult.
+        </p>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            {featuredProducts.map((p) => (
-              <div
-                key={p.id}
-                className="group bg-zinc-900/50 rounded-2xl overflow-hidden hover:bg-zinc-900 transition duration-300"
-              >
-                {/* IMAGE */}
-                <Link to={`/tooted/${p.id}`}>
-                <div className="relative overflow-hidden">
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-stretch ">
+        {featuredProducts.map((p, index) => (
+        <motion.div
+          key={p.id}
+          className="h-full"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.12 }}
+          viewport={{ once: true }}
+        >
+          <Link to={`/tooted/${p.id}`} className="group block h-full">
 
-                    <img
+            <div className="h-full flex flex-col bg-zinc-900/40 rounded-2xl overflow-hidden hover:bg-zinc-900 hover:shadow-2xl transition duration-300">
+
+              {/* IMAGE */}
+              <div className="p-6 pt-6">
+                <div className="relative overflow-hidden rounded-xl">
+                  <img
                     src={p.image}
                     alt={p.name}
-                    className="w-full h-80 object-cover group-hover:scale-105 transition duration-700"
-                    />
-
-                    {/* OVERLAY */}
-                    <div className="absolute inset-0 bg-black/25"></div>
-
-                    {/* PRICE TOP RIGHT */}
-
-
-                </div>
-                </Link>
-
-                <div className="px-4 py-4 flex justify-between items-start gap-4">
-                  <div className="max-w-[65%]">
-                    <h3 className="text-lg font-serif tracking-wide mb-1">
-                      {p.name}
-                    </h3>
-
-                    <p className="text-zinc-500 text-sm leading-relaxed">
-                      {p.desc}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col items-end gap-2 shrink-0">
-                    <p className="text-(--colorSecond) text-lg tracking-wide">
-                      {p.price} €
-                    </p>
-
-                    <button className="px-4 py-1.5 border border-(--colorSecond) text-sm rounded-full hover:bg-(--colorSecond-light)/10 transition">
-                      Lisa
-                    </button>
-                  </div>
+                    className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/20" />
                 </div>
               </div>
-            ))}
-          </div>
 
-          <div className="mt-16 text-center">
-            <Link
-              to="/tooted"
-              className="px-8 py-3 border border-(--colorSecond) hover:bg-(--colorSecond-light)/10 rounded-full transition inline-block"
-            >
-              Vaata kõiki tooteid →
-            </Link>
-          </div>
+              {/* CONTENT */}
+              <div className="px-6 pb-6 flex flex-col flex-grow">
+
+                <div>
+                  <h3 className="text-lg font-serif tracking-wide mb-2">
+                    {p.name}
+                  </h3>
+
+                  <p className="text-zinc-500 text-sm leading-relaxed line-clamp-3">
+                    {p.desc}
+                  </p>
+                </div>
+
+                <div className="mt-auto flex justify-between items-center pt-4">
+                  <p className="text-[var(--colorSecond)] text-lg tracking-wide">
+                    {p.price} €
+                  </p>
+
+                  <button className="px-4 py-1.5 border border-[var(--colorSecond)] text-xs tracking-widest uppercase rounded-full hover:bg-[var(--colorSecond)]/10 transition">
+                    Lisa
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </Link>
+        </motion.div>
+        
+          ))}
         </div>
-      </section>
+
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <Link
+            to="/tooted"
+            className="px-8 py-3 border border-[var(--colorSecond)] rounded-full tracking-widest text-sm hover:bg-[var(--colorSecond)]/10 transition inline-block"
+          >
+            VAATA KÕIKI TOOTEID →
+          </Link>
+        </div>
+
+      </div>
+    </section>
 
       {/* EXPERIENCE */}
     <section className="relative w-full overflow-hidden min-h-[700px] md:min-h-[850px]">
