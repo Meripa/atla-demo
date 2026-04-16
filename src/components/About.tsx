@@ -31,18 +31,18 @@ const About = () => {
       </div>
 
       {/* 🧠 CONTENT */}
-    <div className="relative z-10 w-full max-w-[450px] mx-auto px-6">
+    <div className="relative z-10 w-full max-w-[500px] mx-auto px-6">
 
-      <div className="text-center md:text-left space-y-6">
+      <div className="text-center md:text-left ">
 
         {/* heading */}
-        <h1 className="text-4xl md:text-6xl font-serif leading-tight tracking-wide">
+        <h5 className="text-6xl md:text-6xl font-serif leading-tight tracking-wide">
           Meie lugu
-        </h1>
+        </h5>
 
         {/* text */}
         <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-md">
-          Traditsioon, aeg ja käsitöö – Atla olemus igas tilgas.
+        Traditsioon, aeg ja käsitöö - Atla olemus igas tilgas.
         </p>
 
         </div>
@@ -125,7 +125,7 @@ const About = () => {
                 <p className="text-zinc-400 leading-relaxed">
                     Tegutseme neljas suunas: käsitöönapsud, alkoholivabad joogid,
                     teenustöö teistele tootjatele ja joogikultuuri edendamine.
-                    Meie tootmine asub nüüd Jüris, kus saame luua rohkem ja paremini.
+                    Meie tootmine asub nüüd Jüris,  kus saame luua rohkem ja veelgi mugavamalt
                 </p>
                 </div>
 

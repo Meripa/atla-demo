@@ -7,7 +7,7 @@ import logo from '../assets/logo.png'
 
 import grupipilt from '../assets/aboutpage/grupipilt.jpg'
 import bottle from '../assets/bottle.png'
-import masintuur from '../assets/masintuur.png'
+import masintuur from '../assets/meesmasinaga.png'
 
 
 // Front products
@@ -37,17 +37,16 @@ function App() {
 
           {/* heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-6 leading-tight">
-            Eesti käsitööbrändi destilleerija,
+            Eesti käsitööbrändi destilleerija, kus
             <br />
             <span className="text-[var(--colorSecond)]">
-              kus aeg loob maitse
+              aeg loob maitse
             </span>
           </h1>
 
           {/* text */}
           <p className="text-zinc-300 max-w-lg mb-10">
-            Väikeses Eesti külas valmiv premium käsitööalkohol,
-            kus traditsioon kohtub kvaliteediga.
+            Ühes mõnusas Eesti külas valmiv premium käsitööalkohol, kus traditsioon kohtub kvaliteediga.
           </p>
 
           {/* buttons */}
@@ -90,7 +89,7 @@ function App() {
           />
 
           {/* overlay */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/20" />
 
           {/* gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black/90" />
@@ -98,28 +97,28 @@ function App() {
       </div>
 
       {/* 🧠 CONTENT WRAPPER */}
-    <div className="relative z-10 flex items-end pb-[80px] md:pb-[120px]">
-      <div className="w-full max-w-[1300px] mx-auto px-6 text-center">
+      <div className="relative z-10 flex items-end h-full pb-[100px] md:pb-[140px] min-h-[700px] md:min-h-[900px]">
+        <div className="w-full max-w-[1300px] mx-auto px-3 text-center">
 
-        <motion.div
-          className="flex flex-col items-center h-[200px] justify-between mt-20 md:mt-130"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+          <motion.div
+            className="flex flex-col items-center gap-4 md:gap-6"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
 
-          <p className="text-gray-300 max-w-md mx-auto">
-            Meie signatuurjook – tugev, tasakaalus ja meeldejääv.
-          </p>
+            <h1 className="text-gray-300 text-xl md:text-2xl">
+              Meie signatuurjook
+            </h1>
 
-          <button className="px-8 py-3 border border-white text-white tracking-widest hover:bg-white hover:text-black transition-all duration-300">
-            VAATA ROHKEM
-          </button>
+            <button className="px-8 py-3 border border-white text-white tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+              VAATA ROHKEM
+            </button>
 
-        </motion.div>
+          </motion.div>
 
+        </div>
       </div>
-    </div>
 
     </section>
 
@@ -156,8 +155,7 @@ function App() {
         </h2>
 
         <p className="text-center text-zinc-400 mb-16 max-w-xl mx-auto leading-relaxed">
-          Need joogid ei ole juhuslik valik. Igaüks neist on kujunenud
-          aeglaselt ja teadlikult.
+          Tasakaalus maitse, puhas karakter ja hetk, mida tasub nautida
         </p>
 
         {/* GRID */}

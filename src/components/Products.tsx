@@ -20,8 +20,7 @@ const Products = () => {
         </h1>
 
         <p className="text-zinc-400 leading-relaxed max-w-lg mx-auto">
-          Iga jook on loodud aeglaselt ja teadlikult – tasakaalus maitse,
-          puhas karakter ja hetk, mida tasub nautida.
+          Iga retsept on loodud läbimõeldult ning kiirustamata.
         </p>
       </div>
 

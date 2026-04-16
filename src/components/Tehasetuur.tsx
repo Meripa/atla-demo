@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import ringkaikImg from "../assets/tehasetuur.png"
 import kohaleImg from "../assets/sinujuurde.png"
-import heroImg from "../assets/masintuur.png"
+import heroImg from "../assets/tehasetuur1.png"
 
 const Tehasetuur = () => {
   return (
@@ -42,12 +42,12 @@ const Tehasetuur = () => {
               Atla Experience
             </p>
 
-            <h1 className="text-4xl md:text-6xl font-serif leading-tight mb-6">
+            <h4 className="text-4xl md:text-6xl font-serif leading-tight mb-6">
               Koge Atla maailma
-            </h1>
+            </h4>
 
             <p className="text-zinc-300 text-lg leading-relaxed max-w-[500px] mb-10">
-              Tule avasta, kuidas sünnivad meie joogid – või lase meil tuua see kogemus sinu seltskonnani.
+              Tule avasta, kuidas sünnivad meie joogid <br /> või lase meil tuua see kogemus sinu seltskonnani.
             </p>
 
             <button className="px-8 py-3 bg-[var(--colorSecond)] text-black rounded-full tracking-widest text-sm uppercase hover:opacity-90 transition">
@@ -62,15 +62,15 @@ const Tehasetuur = () => {
       {/* INTRO */}
       <section className="py-[100px]">
         <div className="max-w-[700px] mx-auto px-6 text-center">
-          <p className="text-zinc-400 text-lg leading-relaxed">
-            Pakume võimalust kogeda Atla maitset kahel moel — külastades meie destilleerimiskoda või kutsudes meid oma sündmusele.
-          </p>
+          <h6 className="text-zinc-400 text-4xl leading-relaxed ">
+            Pakume võimalust kogeda Atla maitset kahel moel:
+          </h6>
         </div>
       </section>
 
       {/* OPTIONS */}
-      <section className="py-[120px]">
-        <div className="max-w-[1100px] mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <section>
+        <div className="max-w-[1000px] mx-auto px-6 grid md:grid-cols-2 gap-10">
 
           {[
             {
@@ -78,14 +78,14 @@ const Tehasetuur = () => {
               img: ringkaikImg,
               desc: "Tule meile külla, vaata destilleerimisprotsessi oma silmaga ning saa osa ehtsast käsitööjoogi kogemusest.",
               price: "Alates 250 € / grupp",
-              btn: "Broneeri ringkäik →"
+              btn: "Uuri Lisa →"
             },
             {
               title: "Tuleme teie juurde",
               img: kohaleImg,
               desc: "Korraldame degustatsiooni või maitseelamuse sinu sündmusel, ettevõttes või privaatsemas seltskonnas.",
               price: "Hind kokkuleppel",
-              btn: "Küsi pakkumist →"
+              btn: "Uuri lisa →"
             }
           ].map((item, i) => (
 
@@ -132,36 +132,6 @@ const Tehasetuur = () => {
 
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-[120px] text-center">
-        <div className="max-w-[800px] mx-auto px-6">
-
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">
-              Elamus, mis jääb meelde
-            </h2>
-
-            <p className="text-zinc-400 leading-relaxed mb-10">
-              Olgu selleks külastus meie juurde või Atla maitsete toomine teie seltskonda —
-              eesmärk on pakkuda erilist ja meeldejäävat kogemust.
-            </p>
-
-            <button className="px-10 py-4 bg-[var(--colorSecond)] text-black rounded-full tracking-widest text-sm uppercase hover:opacity-90 transition">
-              Kirjuta meile →
-            </button>
-
-          </motion.div>
-
-        </div>
-      </section>
-
     </div>
   )
 }

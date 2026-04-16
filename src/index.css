@@ -24,7 +24,11 @@ h1, h2, h3{
   font-size: 30px;
 }
 
-h4{
+h4, h5{
+   font-family: "Lovelo", sans-serif; 
+}
+
+h6{
    font-family: "Lovelo", sans-serif; 
 }
 

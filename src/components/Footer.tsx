@@ -22,15 +22,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* NAV */}
-          <div>
-            <h4 className="mb-3 text-zinc-300">Lehed</h4>
-            <div className="flex flex-col gap-2 text-zinc-400">
-              <Link to="/">Avaleht</Link>
-              <Link to="/tooted">Tooted</Link>
-              <Link to="/tehasetuur">Tehas</Link>
-            </div>
-          </div>
+
 
           {/* LEGAL */}
           <div>

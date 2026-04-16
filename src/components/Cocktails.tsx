@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-import cocktailHero from '../assets/bottle.png'
+import cocktailHero from '../assets/pokaal.png'
 
 import cocktail1 from '../assets/bottle.png'
 import cocktail2 from '../assets/bottle.png'
@@ -56,12 +56,12 @@ function CocktailsPage() {
             <h1 className="text-4xl md:text-6xl font-serif leading-tight mb-6">
               Kokteilid, mis
               <br />
-              loovad hetke
+              loovad atmosfääri
             </h1>
 
             <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-[520px]">
-              Atla joogid ei ole lihtsalt maitse. Need on kogemus, mida saab
-              jagada — aeglaselt, teadlikult ja õigel hetkel.
+              Atla joogid on kogemus omaette. <br></br>
+              Tarvitada nautides!
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -150,27 +150,26 @@ function CocktailsPage() {
             </p>
 
             <h2 className="text-4xl md:text-5xl font-serif mb-6">
-              Atla Old Fashioned
+              Old Fashioned
             </h2>
 
             <p className="text-zinc-400 leading-relaxed mb-8 max-w-[520px]">
-              Klassika, mis toob esile joogi sügavuse ja karakteri. Lihtne
-              serveering, mis jätab maitsetele ruumi.
+              Tõeline klassik, mis toob esile viski karakteri ning sügavuse. 
             </p>
 
             <div className="space-y-3 text-zinc-300 mb-8">
               <p>• 50 ml Atla viskit</p>
-              <p>• 1 suhkrukuubik või 10 ml suhkrusiirupit</p>
-              <p>• 2 dash aromatic bittersit</p>
-              <p>• Apelsinikoor</p>
+              <p>• 10 ml suhkrusiirupit</p>
+              <p>• 2 tilka aromatic bitterit</p>
+              <p>• 1 viil apelsinikoort</p>
               <p>• Jää</p>
             </div>
 
             <div>
               <h3 className="text-lg font-serif mb-3">Valmistamine</h3>
               <p className="text-zinc-400 leading-relaxed max-w-[560px]">
-                Sega koostisosad klaasis või mixing glass’is jääga, vala madalasse
-                klaasi suure jääkuubiku peale ning väljenda peale apelsinikoore õlid.
+                Sega madalas klaasis viski ning suhkrusiirup. Lisa jää, veidi bitterit ja pigista peale aroomid apelsinikoorest.
+                 Kukuta apelsinikoor joogi sisse ja naudi. <br /> Nii lihtne see ongi!
               </p>
             </div>
           </motion.div>
@@ -235,46 +234,7 @@ function CocktailsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-[100px] md:py-[130px]">
-        <div className="max-w-[900px] mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 26 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-xs tracking-[0.3em] uppercase text-[var(--colorSecond)] opacity-80 mb-5">
-              Atla moment
-            </p>
 
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">
-              Loo oma serveering
-            </h2>
-
-            <p className="text-zinc-400 max-w-[600px] mx-auto leading-relaxed mb-10">
-              Iga hea kokteil algab õigetest maitsetest. Avasta Atla tooted ja
-              ehita oma järgmine hetk nende ümber.
-            </p>
-
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                to="/tooted"
-                className="px-8 py-3 bg-[var(--colorSecond)] text-zinc-950 rounded-full tracking-widest text-sm uppercase hover:opacity-90 transition"
-              >
-                Osta tooted
-              </Link>
-
-              <Link
-                to="/meist"
-                className="px-8 py-3 border border-[var(--colorSecond)] rounded-full tracking-widest text-sm uppercase hover:bg-[var(--colorSecond)]/10 transition"
-              >
-                Loe meist
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   )
 }
