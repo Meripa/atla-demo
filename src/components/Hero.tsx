@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 
 // import Meiekirg from '../assets/Meiekirg.jpg'
 import logo from '../assets/logo.png'
-import tehasetuur from '../assets/aboutpage/masin.png'
-import sinujuurde from '../assets/sinujuurde.png'
+
 import grupipilt from '../assets/aboutpage/grupipilt.jpg'
 import bottle from '../assets/bottle.png'
 import masintuur from '../assets/masintuur.png'
@@ -15,21 +14,6 @@ import masintuur from '../assets/masintuur.png'
 const featuredIds = [1, 3, 5]
 const featuredProducts = products.filter((p) => featuredIds.includes(p.id))
 
-// Tours / experiences
-const experiences = [
-  {
-    title: 'Meie juures',
-    desc: '2h ekskursioon koos tootmise tutvustusega ning degusteerimisega.',
-    price: '250 €',
-    image: tehasetuur,
-  },
-  {
-    title: 'Kliendi juures',
-    desc: 'Tuleme Teie juurde oma lugu jutustama.',
-    price: '150 €',
-    image: sinujuurde,
-  },
-]
 
 function App() {
   return (
