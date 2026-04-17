@@ -1,7 +1,17 @@
+import taust from '../assets/5.png'
+
 const Contact = () => {
   return (
     <div className=" text-white min-h-screen pt-32">
-    <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
+      {/* BACKGROUND*/}
+      <div className="fixed inset-0 -z-20">
+        <img
+          src={taust}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60 blur-[2px]" />
+      </div>
       {/* HERO */}
       <section className="text-center px-6 mb-16">
         <h1 className="text-5xl font-serif mb-4">

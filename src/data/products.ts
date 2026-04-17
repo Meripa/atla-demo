@@ -1,6 +1,7 @@
-import ounasamakas from "../assets/products/ounasamakas.png"
+import ounasamakas from "../assets/products/ounasamakas.jpg"
 import kirsilikoor from "../assets/products/kirsilikoor.png"
 import klaasid from "../assets/products/klaasid.png"
+import gunnar from  "../assets/products/gunnar.jpg"
 
 export const products = [
   {
@@ -101,5 +102,32 @@ export const products = [
     price: 59,
     image: klaasid,
     category: "eriseeria"
+  },
+    {
+    id: 11,
+    name: "GIN 45 % vol 700ml",
+    desc: 'Klassikaline klaar õunapuskar.',
+    shortDesc: "Klassikaline klaar õunapuskar.",
+    price: 59,
+    image: gunnar,
+
+    sku: "4744893010024",
+    volume: "1500 ml",
+    alcohol: "59% vol",
+
+    description: "Imeline jook, mida tuleks nautida toatemperatuuril.",
+
+    details: {
+      piirkond: "Eestis toodetud, käsitööna",
+      alkohol: "59 % vol",
+      maht: "1500 ml",
+      tooraine: "Destilleeritud eesti parimast õunaveinist",
+      varvus: "Kirgas",
+      aroom: "Õun",
+      maitse: "Õun, rammus samakas",
+      toit: "Liha, kala, kalamari, austrid, jäätis",
+      serveerimine: "Toatemperatuuril, lahjendatult, kokteilides",
+      kokteil: "Õunanaps granaatõunaga, mustsõstraga või tsitruselistega"
+    }
   },
 ]

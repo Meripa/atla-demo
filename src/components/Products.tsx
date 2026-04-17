@@ -1,18 +1,21 @@
 import { products } from "../data/products"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import taust from "../assets/4.png"
+import taust from "../assets/5.png"
 
 const Products = () => {
   return (
-    <div className="min-h-screen text-white pt-[140px] px-6">
-      <div
-        className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-20"
-        style={{ backgroundImage: taust }}
-      />
+    <div className="relative min-h-screen text-white pt-[140px] px-6">
 
-      {/* GLOBAL BG (kui pole Appis) */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
+      {/* 🔥 BACKGROUND (WORKING) */}
+      <div className="fixed inset-0 -z-20">
+        <img
+          src={taust}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60 blur-[2px]" />
+      </div>
 
       {/* HEADER */}
       <div className="max-w-3xl mx-auto text-center mb-20">
@@ -30,12 +33,11 @@ const Products = () => {
       </div>
 
       {/* GRID */}
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 items-stretch">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
 
         {products.map((p, index) => (
           <motion.div
             key={p.id}
-            className="h-full"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
@@ -61,19 +63,15 @@ const Products = () => {
                 {/* CONTENT */}
                 <div className="px-5 py-5 flex flex-col flex-grow">
 
-                  {/* NAME */}
                   <h4 className="text-lg font-serif tracking-wide mb-2">
                     {p.name}
                   </h4>
 
-                  {/* DESC */}
                   <p className="text-zinc-500 text-sm leading-relaxed line-clamp-2">
                     {p.desc}
                   </p>
 
-                  {/* BOTTOM */}
                   <div className="mt-auto flex justify-between items-center pt-4">
-
                     <p className="text-[var(--colorSecond)] text-lg tracking-wide">
                       {p.price} €
                     </p>
@@ -81,7 +79,6 @@ const Products = () => {
                     <button className="px-4 py-1.5 border border-[var(--colorSecond)] text-xs tracking-widest uppercase rounded-full hover:bg-[var(--colorSecond)]/10 transition">
                       Lisa
                     </button>
-
                   </div>
 
                 </div>
@@ -94,6 +91,7 @@ const Products = () => {
         ))}
 
       </div>
+
     </div>
   )
 }

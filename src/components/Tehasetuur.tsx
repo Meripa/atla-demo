@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import ringkaikImg from "../assets/tehasetuur.png"
 import kohaleImg from "../assets/sinujuurde.png"
 import heroImg from "../assets/tehasetuur1.png"
+import taust from '../assets/5.png'
 
 const Tehasetuur = () => {
   return (
@@ -11,8 +12,16 @@ const Tehasetuur = () => {
       <section className="relative w-full overflow-hidden min-h-[650px] md:min-h-[800px]">
 
         {/* BACKGROUND */}
+      {/* BACKGROUND*/}
+      <div className="fixed inset-0 -z-20">
+        <img
+          src={taust}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60 blur-[2px]" />
+      </div>
         <div className="absolute inset-0 flex justify-center">
-        <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
           <div className="w-full max-w-[2000px] h-full relative overflow-hidden">
 
             <img

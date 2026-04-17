@@ -12,13 +12,23 @@ import masintuur from '../assets/meesmasinaga.png'
 
 
 // Front products
-const featuredIds = [1, 5]
+const featuredIds = [11, 1]
 const featuredProducts = products.filter((p) => featuredIds.includes(p.id))
 
 
 function App() {
   return (
     <div className="min-h-screen text-white">
+      {/* 🔥 BACKGROUND*/}
+      <div className="fixed inset-0 -z-20">
+        <img
+          src={taust}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60 blur-[2px]" />
+      </div>
+
       {/* HERO */}
       <section className="relative w-full overflow-hidden  ">
 
@@ -149,7 +159,7 @@ function App() {
       {/* PRODUCTS */}
     <section className="py-[600px] md:py-[140px]">
       <div className="max-w-[800px] mx-auto px-6">
-        <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
+        
         {/* HEADER */}
         <h2 className="text-4xl md:text-5xl font-serif text-center mb-6">
           Valik hetkedeks, mis väärivad aega

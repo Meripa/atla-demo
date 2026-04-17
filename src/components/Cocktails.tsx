@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import taust from '../assets/5.png'
 
 import cocktailHero from '../assets/pokaal.png'
 
@@ -26,10 +27,19 @@ const cocktails = [
 function CocktailsPage() {
   return (
     <div className="min-h-screen text-white">
+      {/* BACKGROUND*/}
+      <div className="fixed inset-0 -z-20">
+        <img
+          src={taust}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60 blur-[2px]" />
+      </div>
       {/* HERO */}
       <section className="relative w-full overflow-hidden min-h-[650px] md:min-h-[820px]">
         <div className="absolute inset-0 flex justify-center">
-        <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-[#0b0b0b] to-black" />
+        
           <div className="w-full max-w-[2000px] h-full relative overflow-hidden">
             <img
               src={cocktailHero}
