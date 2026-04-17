@@ -3,12 +3,13 @@ import { products } from '../data/products'
 import { motion } from "framer-motion"
 
 // import Meiekirg from '../assets/Meiekirg.jpg'
-import logo from '../assets/logo.png'
 
-import taust from "../assets/4.png"
+
+import taust from "../assets/5.png"
 import grupipilt from '../assets/aboutpage/grupipilt.jpg'
 import bottle from '../assets/bottle.png'
 import masintuur from '../assets/meesmasinaga.png'
+import linnuke from '../assets/linnuke.png'
 
 
 // Front products
@@ -19,7 +20,7 @@ const featuredProducts = products.filter((p) => featuredIds.includes(p.id))
 function App() {
   return (
     <div className="min-h-screen text-white">
-      {/* 🔥 BACKGROUND*/}
+      {/* BACKGROUND*/}
       <div className="fixed inset-0 -z-20">
         <img
           src={taust}
@@ -37,13 +38,13 @@ function App() {
 
 
         {/* content */}
-        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 py-[120px] md:py-[160px]">
+        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 py-[120px] md:py-[210px]">
 
           {/* logo */}
           <img
-            src={logo}
+            src={linnuke}
             alt="Atla"
-            className="h-32 sm:h-40 md:h-48 object-contain mb-6"
+            className="h-32 sm:h-40 md:h-48 object-contain mb-6 p-10"
           />
 
           {/* heading */}
