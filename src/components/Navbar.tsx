@@ -49,7 +49,7 @@ const Navbar = () => {
             {/* LEFT NAV */}
             <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute left-[20%]">
             <Link to="/" className="text-zinc-400 hover:text-[var(--bronze)] transition">Home</Link>
-            <Link to="/tooted" className="text-zinc-400 hover:text-(--bronze) transition">Products</Link>
+            <Link to="/products" className="text-zinc-400 hover:text-(--bronze) transition">Products</Link>
             
           {/*  <Link to="/kokteilid" className="text-zinc-400 hover:text-(--bronze) transition">Kokteilid</Link> */}
             </nav>
@@ -61,8 +61,8 @@ const Navbar = () => {
 
             {/* RIGHT NAV */}
             <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute right-[20%]">
-            <Link to="/meist" className="text-zinc-400 hover:text-(--bronze) transition">About us</Link>
-            <Link to="/kontakt" className="text-zinc-400 hover:text-(--bronze) transition">Contact</Link>
+            <Link to="/aboutus" className="text-zinc-400 hover:text-(--bronze) transition">About us</Link>
+            <Link to="/contact" className="text-zinc-400 hover:text-(--bronze) transition">Contact</Link>
             </nav>
 
             {/* LANGUAGE + CTA */}
@@ -115,7 +115,7 @@ const Navbar = () => {
 
             </div>
             {/* CTA */}
-            <Link to="/tehasetuur"className="px-5 py-2 border border-(--colorSecond) rounded-full text-sm hover:bg-(--colorSecond-light)/10 transition">
+            <Link to="/contact"className="px-5 py-2 border border-(--colorSecond) rounded-full text-sm hover:bg-(--colorSecond-light)/10 transition">
                 Contact
             </Link>
 

@@ -42,7 +42,7 @@ const Products = () => {
             viewport={{ once: true }}
           >
 
-            <Link to={`/tooted/${p.id}`} className="group block h-full">
+            <Link to={`/products/${p.id}`} className="group block h-full">
 
               <div className="h-full flex flex-col bg-zinc-900/40 rounded-2xl overflow-hidden hover:bg-zinc-900 hover:shadow-2xl transition duration-300">
 

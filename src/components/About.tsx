@@ -195,7 +195,7 @@ const About = () => {
           Discover sports drinks built for training, recovery, and everyday performance.
         </p>
 
-        <Link to="/tooted"className="px-10 py-4 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light)">
+        <Link to="/products"className="px-10 py-4 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light)">
           Explore products →
         </Link>
       </section>

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
-import liviko from "../assets//liviko.png"
-import tank from "../assets/tank.png"
-import cidermill from "../assets/cidermill.png"
-import coop from "../assets/coop.png"
+import liviko from "../assets//logo.png"
+import tank from "../assets/logo.png"
+import cidermill from "../assets/logo.png"
+import coop from "../assets/logo.png"
+
 const partners = [liviko, tank, cidermill, coop]
 
 const Footer = () => {
@@ -16,27 +17,37 @@ const Footer = () => {
 
           {/* BRAND */}
           <div>
-            <h3 className="text-lg font-serif mb-3">Atla Distillery</h3>
+            <h3 className="text-lg font-serif mb-3">HydroFuel</h3>
             <p className="text-zinc-400">
-              Eesti käsitööjoogid, loodud kvaliteedi ja traditsiooniga.
+              Performance drinks built for hydration, energy, and recovery.
+            </p>
+
+            {/* TAGLINE */}
+            <p className="text-xs text-zinc-500 mt-4 tracking-widest">
+              HYDRATION • ENERGY • RECOVERY
             </p>
           </div>
 
-
+          {/* NAV */}
+          <div>
+            <h4 className="mb-3 text-zinc-300">Navigation</h4>
+            <div className="flex flex-col gap-2 text-zinc-400">
+              <Link to="/products">Products</Link>
+              <Link to="/about">About</Link>
+              <Link to="/contact">Contact</Link>
+            </div>
+          </div>
 
           {/* LEGAL */}
           <div>
-            <h4 className="mb-3 text-zinc-300">Info</h4>
+            <h4 className="mb-3 text-zinc-300">Legal</h4>
             <div className="flex flex-col gap-2 text-zinc-400">
-              <Link to="/tingimused">Kasutustingimused</Link>
-              <Link to="/privaatsus">Privaatsuspoliitika</Link>
+              <Link to="/terms">Terms of Service</Link>
+              <Link to="/privacy">Privacy Policy</Link>
             </div>
           </div>
 
         </div>
-
-
-
       </div>
 
       {/* PARTNERS */}
@@ -44,7 +55,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
 
           <p className="text-zinc-500 uppercase tracking-widest mb-12">
-            Koostööpartnerid
+            Trusted by
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -57,7 +68,7 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="partner"
-                  className="h-20 object-contain opacity-80 hover:opacity-100 transition"
+                  className="h-16 object-contain opacity-70 hover:opacity-100 transition"
                 />
               </div>
             ))}
@@ -65,19 +76,25 @@ const Footer = () => {
           </div>
         </div>
       </section>
-              {/* BOTTOM */}
-      <div className="mt-10 pt-6 border-t border-zinc-800 text-center text-sm md:text-base text-zinc-400 pb-10">
+
+      {/* BOTTOM */}
+      <div className="mt-10 pt-6 border-t border-zinc-800 text-center text-sm text-zinc-400 pb-10">
         <p className="mt-2 flex flex-col md:flex-row justify-center gap-2 md:gap-6">
-          <span>EBD Group OÜ</span>
-          <span>Kesk tee 12, Jüri 75305</span>
-          <a href="tel:+37257877220" className="text-white hover:text-amber-400">
-            +372 5787 7220
+
+          <span>HydroFuel Labs</span>
+          <span>21 Fitness Avenue, Los Angeles, CA</span>
+
+          <a href="tel:+13235550192" className="text-white hover:text-[var(--colorSecond)]">
+            +1 (323) 555-0192
           </a>
-          <a href="mailto:info@ebd.ee" className="text-white hover:text-amber-400">
-            info@ebd.ee
+
+          <a href="mailto:hello@hydrofuel.com" className="text-white hover:text-[var(--colorSecond)]">
+            hello@hydrofuel.com
           </a>
+
         </p>
       </div>
+
     </footer>
   )
 }

@@ -15,10 +15,10 @@ const Contact = () => {
       {/* HERO */}
       <section className="text-center px-6 mb-16">
         <h1 className="text-5xl font-serif mb-4">
-          Võta meiega ühendust
+          Get in touch
         </h1>
         <p className="text-zinc-400 max-w-xl mx-auto">
-          Küsimused, koostöö või külastus – kirjuta meile ja leiame lahenduse.
+           Questions, partnerships, or feedback — reach out and we`ll get back to you.
         </p>
       </section>
 
@@ -28,21 +28,21 @@ const Contact = () => {
         <div className="space-y-8">
 
           <div>
-            <h2 className="text-2xl font-serif mb-4">Kontakt</h2>
-            <p className="text-zinc-400">EBD Group OÜ</p>
-            <p className="text-zinc-400">Atla Viinaköök</p>
-            <p className="text-zinc-400">Kesk tee 12, Jüri</p>
-            <p className="text-zinc-400">Harjumaa, Eesti</p>
+            <h2 className="text-2xl font-serif mb-4">Contact</h2>
+            <p className="text-zinc-400">HydroFuel Labs</p>
+            <p className="text-zinc-400">Performance Division</p>
+            <p className="text-zinc-400">21 Fitness Avenue</p>
+            <p className="text-zinc-400">Tallinn</p>
           </div>
 
           <div>
             <p className="text-zinc-400">Email:</p>
-            <p className="text-white">info@ebd.ee</p>
+            <p className="text-white">hello@hydrofuel.com</p>
           </div>
 
           <div>
-            <p className="text-zinc-400">Telefon:</p>
-            <p className="text-white">+372 578 77 220</p>
+            <p className="text-zinc-400">Phone:</p>
+            <p className="text-white">+111 123 456 789</p>
           </div>
 
 
@@ -52,14 +52,14 @@ const Contact = () => {
         <div className="bg-zinc-900 p-8 rounded-2xl">
 
           <h2 className="text-2xl font-serif mb-6">
-            Kirjuta meile
+            Send a message
           </h2>
 
           <form className="space-y-4">
 
             <input
               type="text"
-              placeholder="Nimi"
+              placeholder="Name"
               className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-(--colorSecond-light)"
             />
 
@@ -70,7 +70,7 @@ const Contact = () => {
             />
 
             <textarea
-              placeholder="Sinu sõnum..."
+              placeholder="Your message..."
               rows={4}
               className="w-full p-3 bg-zinc-800 rounded-lg outline-none focus:ring-2 focus:ring-(--colorSecond-light)"
             />
@@ -79,7 +79,7 @@ const Contact = () => {
               type="submit"
               className="w-full py-3 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light)"
             >
-              Saada sõnum →
+              Send message→
             </button>
 
           </form>
@@ -92,11 +92,11 @@ const Contact = () => {
       <section className="mt-20 px-6">
         <div className="max-w-6xl mx-auto h-100 rounded-2xl overflow-hidden">
             <a
-            href="https://www.google.com/maps?q=Kesk+tee+12+Jüri"
+            href="https://www.google.com/maps?q=Los+Angeles+California"
             target="_blank"
             ></a>
             <iframe
-            src="https://www.google.com/maps?q=Kesk%20tee%2012%20J%C3%BCri&z=14&output=embed"
+            src="https://www.google.com/maps?q=Los+Angeles%20California&z=12&output=embed"
             className="w-full h-full border-0"
             loading="lazy"
             ></iframe>

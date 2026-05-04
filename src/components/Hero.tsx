@@ -65,14 +65,14 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4">
 
             <Link
-              to="/tooted"
+              to="/products"
               className="px-8 py-3 bg-(--colorSecond) text-zinc-950 rounded-full tracking-widest text-sm hover:opacity-90 transition"
             >
               DISCOVER PRODUCTS
             </Link>
 
             <Link
-              to="/tehasetuur"
+              to="/aboutus"
               className="px-8 py-3 border border-(--colorSecond) rounded-full tracking-widest text-sm hover:bg-(--colorSecond)/10 transition"
             >
               LEARN MORE
@@ -156,7 +156,7 @@ function App() {
           transition={{ duration: 0.6, delay: index * 0.12 }}
           viewport={{ once: true }}
         >
-          <Link to={`/tooted/${p.id}`} className="group block h-full">
+          <Link to={`/products/${p.id}`} className="group block h-full">
 
             <div className="h-full flex flex-col bg-zinc-900/40 rounded-2xl overflow-hidden hover:bg-zinc-900 hover:shadow-2xl transition duration-300">
 
@@ -207,7 +207,7 @@ function App() {
 
         <div className="mt-16 text-center">
           <Link
-            to="/tooted"
+            to="/products"
             className="px-8 py-3 border border-(--colorSecond) rounded-full tracking-widest text-sm hover:bg-(--colorSecond)/10 transition inline-block"
           >
             VIEW ALL PRODUCTS →
@@ -255,11 +255,11 @@ function App() {
               </p>
 
               <div className="flex flex-col gap-4">
-                <Link to="/tehasetuur" className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                <Link to="/aboutus" className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition-all duration-300">
                   LEARN MORE
                 </Link>
 
-                <Link to="/tehasetuur" className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                <Link to="/aboutus" className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition-all duration-300">
                   SEE INGREDIENTS
                 </Link>
               </div>
