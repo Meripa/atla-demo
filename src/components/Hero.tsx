@@ -4,16 +4,16 @@ import { motion } from "framer-motion"
 
 // import Meiekirg from '../assets/Meiekirg.jpg'
 
-
+import logo from "../assets/logo.png"
 import taust from "../assets/5.png"
 import riietusruum from '../assets/riietusruum.png'
-import bottle from '../assets/bottle3.png'
+import bottle from '../assets/joogid.png'
 import vorkpall from '../assets/vorkpall.png'
-import linnuke from '../assets/linnuke.png'
+
 
 
 // Front products
-const featuredIds = [11, 1]
+const featuredIds = [ 1,2]
 const featuredProducts = products.filter((p) => featuredIds.includes(p.id))
 
 
@@ -38,13 +38,13 @@ function App() {
 
 
         {/* content */}
-        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 py-30 md:py-52.5">
+        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6  md:py-25">
 
           {/* logo */}
           <img
-            src={linnuke}
+            src={logo}
             alt="Sports Drink"
-            className="h-32 sm:h-40 md:h-48 object-contain mb-6 p-10 "
+            className="h-32 sm:h-40 md:h-100 object-contain  "
           />
 
           {/* heading */}

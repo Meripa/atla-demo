@@ -5,9 +5,8 @@ import taust from "../assets/5.png"
 
 const Products = () => {
   return (
-    <div className="relative min-h-screen text-white pt-[140px] px-6">
+    <div className="relative min-h-screen text-white pt-35 px-6">
 
-      {/* 🔥 BACKGROUND (WORKING) */}
       <div className="fixed inset-0 -z-20">
         <img
           src={taust}
@@ -19,21 +18,20 @@ const Products = () => {
 
       {/* HEADER */}
       <div className="max-w-3xl mx-auto text-center mb-20">
-        <p className="text-xs tracking-[0.3em] uppercase text-[var(--colorSecond)] opacity-80 mb-4">
-          Atla Distillery
+        <p className="text-xs tracking-[0.3em] uppercase text-(--colorSecond) opacity-80 mb-4">
+          Perfomance Hydration
         </p>
 
         <h1 className="text-4xl md:text-6xl font-serif mb-6 tracking-wide">
-          Meie joogid
+          Fuel Your Performance
         </h1>
 
         <p className="text-zinc-400 leading-relaxed max-w-lg mx-auto">
-          Iga retsept on loodud läbimõeldult ning kiirustamata.
+         Each formula is crafted with precision to support performance, hydration, and recovery.
         </p>
       </div>
 
-      {/* GRID */}
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+      <div className="max-w-300 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
 
         {products.map((p, index) => (
           <motion.div
@@ -48,20 +46,19 @@ const Products = () => {
 
               <div className="h-full flex flex-col bg-zinc-900/40 rounded-2xl overflow-hidden hover:bg-zinc-900 hover:shadow-2xl transition duration-300">
 
-                {/* IMAGE */}
                 <div className="p-5 pb-0">
                   <div className="relative overflow-hidden rounded-xl">
                     <img
                       src={p.image}
                       alt={p.name}
-                      className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition duration-700"
+                      className="w-full aspect-3/4 object-cover group-hover:scale-105 transition duration-700"
                     />
                     <div className="absolute inset-0 bg-black/20" />
                   </div>
                 </div>
 
                 {/* CONTENT */}
-                <div className="px-5 py-5 flex flex-col flex-grow">
+                <div className="px-5 py-5 flex flex-col grow">
 
                   <h4 className="text-lg font-serif tracking-wide mb-2">
                     {p.name}
@@ -72,12 +69,12 @@ const Products = () => {
                   </p>
 
                   <div className="mt-auto flex justify-between items-center pt-4">
-                    <p className="text-[var(--colorSecond)] text-lg tracking-wide">
+                    <p className="text-(--colorSecond) text-lg tracking-wide">
                       {p.price} €
                     </p>
 
-                    <button className="px-4 py-1.5 border border-[var(--colorSecond)] text-xs tracking-widest uppercase rounded-full hover:bg-[var(--colorSecond)]/10 transition">
-                      Lisa
+                    <button className="px-4 py-1.5 border border-(--colorSecond) text-xs tracking-widest uppercase rounded-full hover:bg-(--colorSecond)/10 transition">
+                      Add
                     </button>
                   </div>
 
