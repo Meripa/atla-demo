@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# Atla Distillery demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live: https://atla-demo.vercel.app/
 
-Currently, two official plugins are available:
+A portfolio project designed to showcase a modern React + TypeScript + Vite application in the form of a small storefront / product showcase website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What this project is
 
-## React Compiler
+This application is a website that introduces Atla Distillery product-related content, including:
+- product listings and product cards
+- product detail page
+- manufacturing tour and blog sections
+- contact form and map display
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app is built with a clean component-based architecture and uses React Router for page navigation.
 
-## Expanding the ESLint configuration
+## Key features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Multi-page React application
+- Background imagery and dark UI elements styled with Tailwind CSS
+- Framer Motion animations for pages and product cards
+- Product grid and product detail view
+- Contact page with a form and Google Maps iframe
+- Shared layout using `MainLayout`, `Navbar`, and `Footer`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Framer Motion
+- ESLint
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting started
+
+1. Install dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start the development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+3. Open in browser
+
+```bash
+http://localhost:5173
+```
+
+4. Build for production
+
+```bash
+npm run build
+```
+
+5. Preview production build
+
+```bash
+npm run preview
+```
+
+## Project structure
+
+- `src/App.tsx` – application router and page setup
+- `src/layouts/MainLayout.tsx` – shared layout with navigation and footer
+- `src/pages/` – individual page components
+- `src/components/` – reusable UI components
+- `src/data/products.ts` – product descriptions and metadata
+- `src/assets/` – images and visual assets
+
+## What this project demonstrates
+
+- ability to build an interactive React application with multiple pages
+- experience with a modern front-end stack: Vite + React + TypeScript
+- integration of styled UI and animation using Tailwind CSS and Framer Motion
+- ability to organize code into modular components and pages
+
+## Improvements to add
+
+- real shopping cart and checkout flow
+- product search and filtering
+- form validation and backend integration
+- customer reviews / feedback section
+- authentication and admin panel
+
+---
+
+> Note: this project is intended as a portfolio example to demonstrate front-end development and a polished user interface.
