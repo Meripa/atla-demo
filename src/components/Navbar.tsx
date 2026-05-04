@@ -48,10 +48,10 @@ const Navbar = () => {
 
             {/* LEFT NAV */}
             <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute left-[10%]">
-            <Link to="/" className="text-zinc-400 hover:text-[var(--bronze)] transition">Avaleht</Link>
-            <Link to="/tooted" className="text-zinc-400 hover:text-(--bronze) transition">Tooted</Link>
-            <Link to="/meist" className="text-zinc-400 hover:text-(--bronze) transition">Meie lugu</Link>
-            <Link to="/kokteilid" className="text-zinc-400 hover:text-(--bronze) transition">Kokteilid</Link>
+            <Link to="/" className="text-zinc-400 hover:text-[var(--bronze)] transition">Home</Link>
+            <Link to="/tooted" className="text-zinc-400 hover:text-(--bronze) transition">Products</Link>
+            
+          {/*  <Link to="/kokteilid" className="text-zinc-400 hover:text-(--bronze) transition">Kokteilid</Link> */}
             </nav>
 
             {/* LOGO CENTER */}
@@ -61,9 +61,10 @@ const Navbar = () => {
 
             {/* RIGHT NAV */}
             <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute right-[20%]">
-            <Link to="/tehasetuur" className="text-zinc-400 hover:text-(--bronze) transition">Tehas</Link> 
-            <Link to="/blogi" className="text-zinc-400 hover:text-(--bronze) transition">Blogi</Link>
-            <Link to="/kontakt" className="text-zinc-400 hover:text-(--bronze) transition">Kontakt</Link>
+            <Link to="/meist" className="text-zinc-400 hover:text-(--bronze) transition">About us</Link>
+        {/*    <Link to="/tehasetuur" className="text-zinc-400 hover:text-(--bronze) transition">Tehas</Link> 
+            <Link to="/blogi" className="text-zinc-400 hover:text-(--bronze) transition">Blogi</Link> */}
+            <Link to="/kontakt" className="text-zinc-400 hover:text-(--bronze) transition">Contact</Link>
             </nav>
 
             {/* LANGUAGE + CTA */}
@@ -117,7 +118,7 @@ const Navbar = () => {
             </div>
             {/* CTA */}
             <Link to="/tehasetuur"className="px-5 py-2 border border-(--colorSecond) rounded-full text-sm hover:bg-(--colorSecond-light)/10 transition">
-                Broneeri
+                Contact
             </Link>
 
             </div>
