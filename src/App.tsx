@@ -5,12 +5,10 @@ import './index.css'
 
 {/* Lehed */}
 import ProductsPage from './pages/ProductsPage';
-import TehasetuurPage from './pages/TehasetuurPage'
 import ProductDetailPage from './pages/ProductDetailPage';
 import TermsPage from './pages/TermsPage'
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import BlogPage from './pages/BlogPage'
 
 
 const router = createBrowserRouter(
@@ -19,12 +17,10 @@ const router = createBrowserRouter(
     <Route path='/' element={<MainLayout />}>
       <Route index element={<HomePage />}/>
       <Route path="/products" element={<ProductsPage />} />
-      <Route path="/tehasetuur" element={<TehasetuurPage />} />
       <Route path='/products/:id' element={<ProductDetailPage />} />
       <Route path='/aboutus' element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path='/services' element={<TermsPage />} />
-      <Route path='/blogi' element={<BlogPage />} />
     </Route>
     
     )

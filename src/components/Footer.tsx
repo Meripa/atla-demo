@@ -84,11 +84,11 @@ const Footer = () => {
           <span>HydroFuel Labs</span>
           <span>21 Fitness Avenue, Los Angeles, CA</span>
 
-          <a href="tel:+13235550192" className="text-white hover:text-[var(--colorSecond)]">
+          <a href="tel:+13235550192" className="text-white hover:text-(--colorSecond)">
             +1 (323) 555-0192
           </a>
 
-          <a href="mailto:hello@hydrofuel.com" className="text-white hover:text-[var(--colorSecond)]">
+          <a href="mailto:hello@hydrofuel.com" className="text-white hover:text-(--colorSecond)">
             hello@hydrofuel.com
           </a>
 
