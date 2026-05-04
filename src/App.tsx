@@ -11,7 +11,7 @@ import TermsPage from './pages/TermsPage'
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage'
-import CocktailsPage from './pages/CocktailsPage.tsx';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +25,6 @@ const router = createBrowserRouter(
       <Route path="/kontakt" element={<ContactPage />} />
       <Route path='/tingimused' element={<TermsPage />} />
       <Route path='/blogi' element={<BlogPage />} />
-      <Route path='/kokteilid' element={<CocktailsPage />} />
     </Route>
     
     )

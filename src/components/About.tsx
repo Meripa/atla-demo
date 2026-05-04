@@ -1,9 +1,11 @@
 import grupipilt from '../assets/aboutpage/grupipilt.jpg'
-import atlamois from '../assets/aboutpage/atlamois.png'
+import idea from '../assets/aboutpage/idea.png'
 import masin from '../assets/aboutpage/masin.png'
 import auhind from '../assets/aboutpage/auhind.png'
 import tana from '../assets/aboutpage/tana.jpg'
 import taust from '../assets/5.png'
+
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -18,11 +20,11 @@ const About = () => {
         <div className="absolute inset-0 bg-black/60 blur-[2px]" />
       </div>
       {/* HERO */}
-    <section className="relative w-full overflow-hidden min-h-[800px] md:min-h-[850px] flex items-center">
+    <section className="relative w-full overflow-hidden min-h-200 md:min-h-[212 flex items-center">
 
       {/* 🔥 CENTERED BACKGROUND (ei veni lõpmatuseni) */}
       <div className="absolute inset-0 flex justify-center">
-        <div className="w-full max-w-[2000px] h-full relative overflow-hidden">
+        <div className="w-full max-w-500 h-full relative overflow-hidden">
 
           <img
             src={grupipilt}
@@ -30,28 +32,25 @@ const About = () => {
             className="w-full h-full object-cover object-[center_20%] scale-105"
           />
 
-          {/* dark overlay */}
           <div className="absolute inset-0 bg-black/60" />
 
-          {/* gradient depth */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/70 via-transparent to-black/80" />
 
         </div>
       </div>
 
-      {/* 🧠 CONTENT */}
-    <div className="relative z-10 w-full max-w-[500px] mx-auto px-6">
+    <div className="relative z-10 w-full max-w-125 mx-auto px-6">
 
       <div className="text-center md:text-left ">
 
         {/* heading */}
         <h5 className="text-6xl md:text-6xl font-serif leading-tight tracking-wide">
-          Meie lugu
+          Our Story
         </h5>
 
         {/* text */}
         <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-md">
-        Traditsioon, aeg ja käsitöö - Atla olemus igas tilgas.
+        Built for athletes who demand more from every session.
         </p>
 
         </div>
@@ -63,7 +62,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-6">
 
             <h2 className="text-4xl font-serif text-center mb-20">
-            Meie teekond
+             Our Journey
             </h2>
 
             <div className="space-y-24">
@@ -72,31 +71,24 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="h-100 rounded-2xl overflow-hidden">
                 <img
-                    src={atlamois}
+                    src={idea}
                     className="w-full h-full object-cover"
                 />
                 </div>
 
                 <div>
-                <h3 className="text-(--colorSecond-light) mb-3">2017</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">The Idea</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                    Kõik sai alguse Atla mõisas, kus taastasime 1905. aastal katkenud
-                    viinapõletamise traditsiooni. Meie kirg on õunasiidrist
-                    õunapiirituse destilleerimine ja selle küpsemine tammevaatides
-                    tipptasemel õunabrändiks.
+                    It started with a simple goal: create a sports drink that supports real performance, not just marketing hype. Clean hydration, functional ingredients, and a taste athletes actually want to drink.
                 </p>
                 </div>
             </div>
 
-            {/* 2018 */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
-                <h3 className="text-(--colorSecond-light) mb-3">2018</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">The Formula</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                    Saime tegevusloa ning alustasime ametlikult tootmist.
-                    Meie destillaator valmis koostöös Saksamaa tootjaga
-                    Müller Brennereianlagen GmbH ning pandi Atlas tööle
-                    isiklikult tootja poolt.
+                     We focused on what matters during training: electrolytes, hydration, energy, and recovery. Every product is designed with a clear purpose — before, during, or after performance.
                 </p>
                 </div>
 
@@ -118,11 +110,9 @@ const About = () => {
                 </div>
 
                 <div>
-                <h3 className="text-(--colorSecond-light) mb-3">Kasv ja tunnustus</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">Performance Tested</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                    Meie tooted on võitnud auhindu Berliinis, Londonis ja USA-s.
-                    2019. aastal tõime Berliinist pronksi, 2020. aastal juba hõbedad
-                    ja rahvusvahelise tunnustuse.
+                    Our drinks are built around active lifestyles and tested in real training environments — from gym sessions and running to volleyball, HIIT, and competition days.
                 </p>
                 </div>
             </div>
@@ -130,11 +120,9 @@ const About = () => {
             {/* TODAY */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
-                <h3 className="text-(--colorSecond-light) mb-3">Täna</h3>
+                <h3 className="text-(--colorSecond-light) mb-3">Today</h3>
                 <p className="text-zinc-400 leading-relaxed">
-                    Tegutseme neljas suunas: käsitöönapsud, alkoholivabad joogid,
-                    teenustöö teistele tootjatele ja joogikultuuri edendamine.
-                    Meie tootmine asub nüüd Jüris,  kus saame luua rohkem ja veelgi mugavamalt
+                    Today, we are building a modern performance drink brand focused on hydration, energy, and recovery. Our mission is simple: help athletes train harder, recover better, and stay ready.
                 </p>
                 </div>
 
@@ -160,35 +148,35 @@ const About = () => {
         <div className="max-w-6xl mx-auto text-center">
 
           <h2 className="text-4xl font-serif mb-16">
-            Meie väärtused
+            Our Values
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
 
             <div className="p-6 bg-zinc-900 rounded-2xl">
               <h3 className="text-xl text-(--colorSecond-light) mb-3">
-                Käsitöö
+                Performance
               </h3>
               <p className="text-zinc-400 text-sm">
-                Väikesed partiid, maksimaalne kvaliteet.
+                Every formula is made to support movement, focus, and output.
               </p>
             </div>
 
             <div className="p-6 bg-zinc-900 rounded-2xl">
               <h3 className="text-xl text-(--colorSecond-light) mb-3">
-                Aeg
+                Hydration
               </h3>
               <p className="text-zinc-400 text-sm">
-                Parim maitse sünnib kannatlikkusest.
+                Balanced electrolytes to help your body perform when it matters.
               </p>
             </div>
 
             <div className="p-6 bg-zinc-900 rounded-2xl">
               <h3 className="text-xl text-(--colorSecond-light) mb-3">
-                Tooraine
+                Recovery
               </h3>
               <p className="text-zinc-400 text-sm">
-                Kasutame parimat toorainet.
+                Designed to help you bounce back and prepare for the next session.
               </p>
             </div>
 
@@ -200,16 +188,16 @@ const About = () => {
       {/* CTA */}
       <section className="py-24 text-center">
         <h2 className="text-4xl font-serif mb-6">
-          Tule ja koge ise
+          Ready to perform?
         </h2>
 
         <p className="text-zinc-400 mb-8">
-          Külastage meie destilleerimiskoda ja avastage Atla maailm.
+          Discover sports drinks built for training, recovery, and everyday performance.
         </p>
 
-        <button className="px-10 py-4 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light)">
-          Broneeri külastus →
-        </button>
+        <Link to="/tooted"className="px-10 py-4 bg-(--colorSecond) text-black rounded-full hover:bg-(--colorSecond-light)">
+          Explore products →
+        </Link>
       </section>
 
     </div>

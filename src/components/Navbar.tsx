@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 h-20 md:h-35 flex items-center justify-center relative">
 
             {/* LEFT NAV */}
-            <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute left-[10%]">
+            <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute left-[20%]">
             <Link to="/" className="text-zinc-400 hover:text-[var(--bronze)] transition">Home</Link>
             <Link to="/tooted" className="text-zinc-400 hover:text-(--bronze) transition">Products</Link>
             
@@ -62,8 +62,6 @@ const Navbar = () => {
             {/* RIGHT NAV */}
             <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest absolute right-[20%]">
             <Link to="/meist" className="text-zinc-400 hover:text-(--bronze) transition">About us</Link>
-        {/*    <Link to="/tehasetuur" className="text-zinc-400 hover:text-(--bronze) transition">Tehas</Link> 
-            <Link to="/blogi" className="text-zinc-400 hover:text-(--bronze) transition">Blogi</Link> */}
             <Link to="/kontakt" className="text-zinc-400 hover:text-(--bronze) transition">Contact</Link>
             </nav>
 
