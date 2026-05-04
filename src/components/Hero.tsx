@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 
 import taust from "../assets/5.png"
-import grupipilt from '../assets/bottle1.png'
+import riietusruum from '../assets/riietusruum.png'
 import bottle from '../assets/bottle3.png'
 import vorkpall from '../assets/vorkpall.png'
 import linnuke from '../assets/linnuke.png'
@@ -278,8 +278,8 @@ function App() {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="relative h-105 rounded-2xl overflow-hidden">
             <img
-              src={grupipilt}
-              alt="Atla distillery"
+              src={riietusruum}
+              alt=""
               className="w-full h-full object-cover"
             />
 
