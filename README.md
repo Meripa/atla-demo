@@ -1,77 +1,74 @@
-# Product showcase demo
+# Hydration Drinks – Sports Brand Showcase
 
-Live: https://example.com/
+Live: https://sportsdrink.vercel.app/
+GitHub: https://github.com/Meripa/sports_drink
 
-A portfolio project designed to showcase a modern React + TypeScript + Vite application in the form of a small storefront / product showcase website.
-
-## What this project is
-
-This application is a website that introduces product-related content, including:
-- product listings and product cards
-- product detail page
-- company tour and blog sections
-- contact form and map display
-
-The app is built with a clean component-based architecture and uses React Router for page navigation.
-
-## Key features
-
-- Multi-page React application
-- Background imagery and dark UI elements styled with Tailwind CSS
-- Framer Motion animations for pages and product cards
-- Product grid and product detail view
-- Contact page with a form and Google Maps iframe
-- Shared layout using `MainLayout`, `Navbar`, and `Footer`
-
-## Technologies
-
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router DOM
+A modern sports drink brand website built with React and TypeScript, focused on clean UI, product presentation, and real-world e-commerce structure.
 
 
-## Getting started
+![Homepage](./assets/screenshot_products.png)
+---
 
-1. Install dependencies
+## 🚀 Overview
 
-```bash
-npm install
-```
+This project simulates a real-world product website for a performance drink brand.
 
-2. Start the development server
-
-```bash
-npm run dev
-```
-
-3. Open in browser
-
-```bash
-http://localhost:5173
-```
-
-4. Build for production
-
-```bash
-npm run build
-```
-
-5. Preview production build
-
-```bash
-npm run preview
-```
-
-## Improvements to add
-
-- real shopping cart and checkout flow
-- product search and filtering
-- form validation and backend integration
-- customer reviews / feedback section
-- authentication and admin panel
+The goal was to design and build a visually polished, responsive interface that showcases products, brand identity, and user flows similar to a modern e-commerce platform.
 
 ---
 
-> Note: this project is intended as a portfolio example to demonstrate front-end development and a polished user interface.
+## ✨ Key Features
+
+- Product listing with dynamic data structure  
+- Individual product detail pages  
+- Reusable component-based architecture  
+- Smooth page transitions using Framer Motion  
+- Responsive design (mobile + desktop)  
+- Contact page with form and map integration  
+- Shared layout system (Navbar, Footer, routing)
+
+---
+![detail](./assets/screenshot_detail.png)
+
+## 🧠 What I focused on
+
+- Clean and modern UI/UX design  
+- Consistent brand styling (hydration / energy / recovery concept)  
+- Component reusability and structure  
+- Realistic product data modeling  
+- Frontend architecture for scalability  
+
+---
+
+## 🛠 Tech Stack
+
+- React  
+- TypeScript  
+- Vite  
+- Tailwind CSS  
+- React Router DOM  
+- Framer Motion  
+
+---
+
+## 📸 Screenshots
+
+(Add images here – homepage, product page, detail page)
+
+---
+
+## 🔧 Future Improvements
+
+- Shopping cart and checkout flow  
+- Product filtering and search  
+- Backend integration (Node.js / API)  
+- Authentication system  
+- Admin panel for product management  
+
+---
+
+## 📌 Notes
+
+This project was built as a portfolio piece to demonstrate frontend development skills, UI/UX design, and the ability to create a realistic product-based application.
+
+---
